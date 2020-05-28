@@ -10,7 +10,8 @@
 # 这时，表中画了圈的以及未划去的那些数正好就是小于 n 的素数。
 # 其实，当你要画圈的素数的平方大于 n 时，那么后面没有划去的数都是素数，就不用继续判了。
 
-
+a = []
+a.in
 class Solution(object):
     def countPrimes(self, n):
         if n < 3:

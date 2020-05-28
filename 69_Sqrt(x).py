@@ -41,3 +41,13 @@ class Solution(object):
         return int(math.sqrt(x))
 a = Solution()
 print(a.mySqrt(8))
+def newton_sqrt(n):
+    eps = 0.0000001
+    result = float(n)
+    while True:
+        lastvalue = result
+        result = result-result/2.0+n/2.0/result
+        if abs(result-lastvalue)<eps:
+            break
+    return result
+print(newton_sqrt(4))

@@ -50,4 +50,10 @@ class Solution(object):
         return l
 a = Solution()
 print(a.selfDividingNumbers(1,22))
-
+with open('dasd',mode='r') as f :
+    lines = f.readlines()
+    count = 0
+    for line in lines:
+        s = line.strip('\n').split(' ')[-1]
+        count += int(s)
+    print(count)
