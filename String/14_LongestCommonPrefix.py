@@ -1,6 +1,16 @@
 # Write a function to find the longest common prefix string amongst an array of strings.
 from numpy.core.tests.test_mem_overlap import xrange
 
+class Solution(object):
+    def longestCommonPrefix(self, strs):
+        ans = ''
+        for i in zip(*strs):
+            if len(set(i)) == 1:
+                ans += i[0]
+            else:
+                break
+        return ans
+
 
 class Solution:
     def longestCommonPrefix(self, strs):

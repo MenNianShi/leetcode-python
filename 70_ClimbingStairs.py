@@ -12,16 +12,16 @@ class Solution(object):
         if n == 0 or n == 1 or n == 2:
             return n
         steps = [1, 1]
-        for i in xrange(2, n+1):
+        for i in range(2, n+1):
             steps.append(steps[i-1] + steps[i-2])
         return steps[n]
 class Solution(object):
-    def climbStairs(self, n):
+    def climbStairs(self,n):
         """
         :type n: int
         :rtype: int
         """
         pre = cur = 1
-        for i in xrange(1, n):
+        for i in range(1, n):
             pre, cur = cur, pre+cur
         return cur
