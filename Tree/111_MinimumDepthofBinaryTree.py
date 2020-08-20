@@ -8,26 +8,23 @@ class TreeNode:
          self.left = None
          self.right = None
 
-
-
 class Solution(object):
     def minDepth(self, root):
         """
         :type root: TreeNode
         :rtype: int
         """
-        if not root:
-            return 0
-        left = self.minDepth(root.left)
-        right = self.minDepth(root.right)
-        if not left and not right:
-            return 1
-        elif not left:
-            return right + 1
-        elif not right:
-            return left + 1
+        if root !=None:
+            if root.left==None and root.right==None:
+                return 1
+            elif root.left!=None and root.right==None:
+                return 1+self.minDepth(root.left)
+            elif root.left==None and root.right!=None:
+                return 1+self.minDepth(root.right)
+            else:
+                return 1+ min(self.minDepth(root.left),self.minDepth(root.right) )
         else:
-            return min(left, right) + 1
+            return 0
 
 #层次遍历，扫到哪层有叶子就返回层数
 class Solution:

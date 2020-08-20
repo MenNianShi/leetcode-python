@@ -15,6 +15,30 @@
 # by a path of the same color as the starting pixel are colored with the new color.
 # Note the bottom corner is not colored 2, because it is not 4-directionally connected
 # to the starting pixel.
+# class Solution(object):
+#     def floodFill(self, image, sr, sc, newColor):
+#         """
+#         :type image: List[List[int]]
+#         :type sr: int
+#         :type sc: int
+#         :type newColor: int
+#         :rtype: List[List[int]]
+#         """
+#         drs = [1,0,-1,0]
+#         dcs = [0,1,0,-1]
+#         queue = [(sr,sc)]
+#         oldColor = image[sr][sc]
+#         image[sr][sc] = newColor
+#         while queue:
+#             r,c = queue.pop()
+#             for dr,dc in zip(drs,dcs):
+#                 nr,nc = r+dr,c+dc
+#                 if 0 <=nr<len(image) and 0<=nc<len(image[0]):
+#                     if image[nr][nc]!=newColor and image[nr][nc]==oldColor:
+#                         image[nr][nc]=newColor
+#                         queue.append((nr,nc))
+#         return image
+
 class Solution(object):
     def floodFill(self, image, sr, sc, newColor):
         """
@@ -24,18 +48,24 @@ class Solution(object):
         :type newColor: int
         :rtype: List[List[int]]
         """
-        drs = [1,0,-1,0]
-        dcs = [0,1,0,-1]
-        queue = [(sr,sc)]
-        oldColor = image[sr][sc]
-        image[sr][sc] = newColor
-        while queue:
-            r,c = queue.pop()
-            for dr,dc in zip(drs,dcs):
-                nr,nc = r+dr,c+dc
-                if 0 <=nr<len(image) and 0<=nc<len(image[0]):
-                    if image[nr][nc]!=newColor and image[nr][nc]==oldColor:
-                        image[nr][nc]=newColor
-                        queue.append((nr,nc))
+        m = len(image)
+        n = len(image[0])
+        start_color = image[sr][sc]
+        visit = [[0]*len(image[0]) for _ in range(len(image))]
+        def dfs(sr,sc):
+            if sr >=0 and sr < m and sc>=0 and sc<n and visit[sr][sc]==0:
+                if image[sr][sc]!=start_color :
+                    return
+                else:
+                    image[sr][sc] = newColor
+                    visit[sr][sc] = 1
+                    dfs(sr+1,sc)
+                    dfs(sr-1,sc)
+                    dfs(sr,sc+1)
+                    dfs(sr,sc-1)
+            else:
+                return
+        dfs(sr,sc)
         return image
-
+a = Solution()
+print(a.floodFill([[1,1,1],[1,1,0],[1,0,1]],1,1,2))
