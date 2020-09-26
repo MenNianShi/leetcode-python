@@ -24,3 +24,19 @@ class Solution(object):
         """
         self.convert(root,self.sum)
         return root
+class Solution(object):
+
+    def convertBST(self, root):
+        """
+        :type root: TreeNode
+        :rtype: TreeNode
+        """
+        self.node_sum = 0
+        def convert(root):
+            if root==None:return
+            convert(root.right)
+            self.node_sum += root.val
+            root.val = self.node_sum
+            convert(root.left)
+        convert(root)
+        return root

@@ -32,7 +32,7 @@ class TreeNode(object):
 
 class Solution(object):
 
-    res =0
+    res = 0
     def pathSum(self, root, sum):
         """
         :type root: TreeNode
