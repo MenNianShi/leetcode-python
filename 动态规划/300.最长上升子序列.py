@@ -16,4 +16,7 @@ class Solution(object):
             for j in range(0,i):
                 if nums[i]>nums[j]:
                     dp[i] = max(dp[j]+1,dp[i])
+        #dp[i] 表示以 nums[i] 这个数结尾的最长递增子序列的长度。  所以这里 用 max(dp) 而非 dp[-1]
         return max(dp)
+a = Solution()
+print(a.lengthOfLIS([1,3,6,7,9,4,10,5,6]))
