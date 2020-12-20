@@ -4,25 +4,17 @@ class TreeNode(object):
         self.val = val
         self.left = left
         self.right = right
-class Solution:
+class Solution(object):
     def insertIntoBST(self, root, val):
-        if not root:
+        """
+        :type root: TreeNode
+        :type val: int
+        :rtype: TreeNode
+        """
+        if root == None:
             return TreeNode(val)
-
-        pos = root
-        while pos:
-            if val < pos.val:
-                if not pos.left:
-                    pos.left = TreeNode(val)
-                    break
-                else:
-                    pos = pos.left
-            else:
-                if not pos.right:
-                    pos.right = TreeNode(val)
-                    break
-                else:
-                    pos = pos.right
-
+        if root.val > val:
+            root.left = self.insertIntoBST(root.left,val)
+        if root.val< val:
+            root.right =  self.insertIntoBST(root.right,val)
         return root
-
