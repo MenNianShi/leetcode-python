@@ -1,4 +1,25 @@
 class Solution(object):
+    def detectCycle(self, head):
+        """
+        :type head: ListNode
+        :rtype: ListNode
+        """
+        fast = slow = head
+        while fast!=None and fast.next!=None:
+            fast = fast.next.next
+            slow = slow.next
+            if fast == slow:
+                break
+        if fast == None or fast.next==None:
+            return None
+        slow = head
+        while fast != slow :
+            fast= fast.next
+            slow=slow.next
+        return slow
+
+
+class Solution(object):
     def hasCycle(self, head):
         if head == None or head.next == None:
             return None

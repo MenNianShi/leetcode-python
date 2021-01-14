@@ -41,3 +41,22 @@ class Solution:
         return res
 
 
+class Solution(object):
+    def combine(self, n, k):
+        """
+        :type n: int
+        :type k: int
+        :rtype: List[List[int]]
+        """
+        nums = [x for x in range(1,n+1)]
+        res = []
+        def backtrack(cur,nums,start):
+            if len(cur)==k and cur not in res:
+                res.append(cur[:])
+                return
+            for i in range(start,len(nums)):
+                cur.append(nums[i])
+                backtrack(cur,nums,i+1)
+                cur.pop()
+        backtrack([],nums,0)
+        return res
