@@ -67,5 +67,47 @@ class Solution(object):
                 return
         dfs(sr,sc)
         return image
+
+
+class Solution(object):
+    visited = []
+
+    def floodFill(self, image, sr, sc, newColor):
+        """
+        :type image: List[List[int]]
+        :type sr: int
+        :type sc: int
+        :type newColor: int
+        :rtype: List[List[int]]
+        """
+        m = len(image)
+        n = len(image[0])
+        start_color = image[sr][sc]
+        visit = [[0] * len(image[0]) for _ in range(len(image))]
+
+        def isValid(sr, sc):
+            m = len(image)
+            n = len(image[0])
+            if sr >= 0 and sr < m and sc >= 0 and sc < n:
+                return True
+            else:
+                return False
+
+        def floodFill2(sr, sc, start_color, newColor):
+            if not isValid(sr, sc):
+                return
+            if visit != 0:
+                return
+            if image[sr][sc] != start_color:
+                return
+            image[sr][sc] = newColor
+            visit[sr][sc] = 1
+            floodFill2(sr + 1, sc, start_color, newColor)
+            floodFill2(sr - 1, sc, start_color, newColor)
+            floodFill2(sr, sc + 1, start_color, newColor)
+            floodFill2(sr, sc - 1, start_color, newColor)
+
+        floodFill2(sr, sc, start_color, newColor)
+        return image
 a = Solution()
 print(a.floodFill([[1,1,1],[1,1,0],[1,0,1]],1,1,2))
