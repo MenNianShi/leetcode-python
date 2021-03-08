@@ -17,9 +17,9 @@ class Solution(object):
         if root !=None:
             if root.left==None and root.right==None:
                 return 1
-            elif root.left!=None and root.right==None:
+            elif root.left!=None and root.right==None:# 保证 是叶子节点
                 return 1+self.minDepth(root.left)
-            elif root.left==None and root.right!=None:
+            elif root.left==None and root.right!=None:# 保证 是叶子节点
                 return 1+self.minDepth(root.right)
             else:
                 return 1+ min(self.minDepth(root.left),self.minDepth(root.right) )
