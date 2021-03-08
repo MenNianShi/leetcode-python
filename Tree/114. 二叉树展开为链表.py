@@ -4,20 +4,16 @@
 
 class Solution:
     def flatten(self, root):
-        preorderList = list()
-
-        def preorderTraversal(root):
-            if root:
-                preorderList.append(root)
-                preorderTraversal(root.left)
-                preorderTraversal(root.right)
-
-        preorderTraversal(root)
-        size = len(preorderList)
-        for i in range(1, size):
-            prev, curr = preorderList[i - 1], preorderList[i]
-            prev.left = None
-            prev.right = curr
+        curr = root
+        while curr:
+            if curr.left:
+                pre = nxt = curr.left
+                while pre.right :
+                    pre = pre.right
+                pre.right = curr.right
+                curr.left = None
+                curr.right = nxt
+            curr = curr.right
 
 
 class Solution:

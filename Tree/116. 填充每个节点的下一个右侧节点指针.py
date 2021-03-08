@@ -32,6 +32,39 @@ class Node(object):
 
 import collections
 
+
+class Solution(object):
+    def connect(self, root):
+        """
+        :type root: Node
+        :rtype: Node
+        """
+        return self.levelOrder(root)
+
+    def levelOrder(self, root):
+        """
+        :type root: TreeNode
+        :rtype: List[List[int]]
+        """
+        level = [root]
+        ans = []
+        if not root:
+            return None
+        while len(level) > 0:
+            next_level = []
+            cur_level = []
+            n = len(level)
+            for i in range(n - 1):
+                level[i].next = level[i + 1]
+            for node in level:
+                cur_level.append(node)
+                if node.left:
+                    next_level.append(node.left)
+                if node.right:
+                    next_level.append(node.right)
+            ans.append(cur_level)
+            level = next_level
+        return root
 class Solution(object):
     def connect(self, root):
         """
