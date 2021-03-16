@@ -13,6 +13,22 @@ class ListNode(object):
     def __init__(self, x):
         self.val = x
         self.next = None
+class Solution:
+    def reverseBetween(self, head: ListNode, left: int, right: int) -> ListNode:
+        # 设置 dummyNode 是这一类问题的一般做法
+        dummy_node = ListNode(-1)
+        dummy_node.next = head
+        pre = dummy_node
+        for _ in range(left - 1):
+            pre = pre.next
+
+        cur = pre.next
+        for _ in range(right - left):
+            nxt = cur.next
+            cur.next = nxt.next
+            nxt.next = pre.next
+            pre.next = nxt
+        return dummy_node.next
 
 class Solution(object):
     successor = None
