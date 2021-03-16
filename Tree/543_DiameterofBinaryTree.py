@@ -26,7 +26,7 @@ class Solution(object):
         :rtype: int
         """
         self.getDepth(root)
-        return self.count00
+        return self.count
 
 
     def getDepth(self,root):

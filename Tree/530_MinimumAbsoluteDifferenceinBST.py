@@ -6,6 +6,20 @@ class TreeNode(object):
          self.right = None
 
 
+class Solution:
+    res, prev = float("inf"), float("-inf")
+    # pre 存储前一个节点
+    def getMinimumDifference(self, root):
+        def dfs(root):
+            if not root:
+                return
+            dfs(root.left)
+            self.res = min(self.res, root.val - self.prev)
+            self.prev = root.val
+            dfs(root.right)
+
+        dfs(root)
+        return self.res
 class Solution(object):
     def getMinimumDifference(self, root): #由于是二叉查找树，中序遍历，取两两间最小值即可
         """

@@ -22,37 +22,24 @@ class TreeNode(object):
         self.right = None
 
 class Solution:
-    def recoverFromPreorder(self, S) :
-        def part(s):
-            STATE_DEPTH = 1
-            STATE_NUM = 2
-            depth = 0
-            num = 0
-            state = STATE_DEPTH
-            for i in s + '$':
-                #print(i, state)
-                if state == STATE_DEPTH:
-                    if i == '-':
-                        depth += 1
-                    elif i in '0123456789':
-                        state = STATE_NUM
-                        num = ord(i) - 48
-                elif state == STATE_NUM:
-                    if i in '-$':
-                        yield (depth, num)
-                        state = STATE_DEPTH
-                        depth = 1
-                        num = 0
-                    elif i in '0123456789':
-                        num = num * 10 + ord(i) - 48
-        t = {}
-        for d, n in part(S):
-            #print(d, n)
-            t[d] = TreeNode(n)
-            if d > 0:
-                parent = t[d - 1]
-                if parent.left is None:
-                    parent.left = t[d]
-                else:
-                    parent.right = t[d]
-        return t[0] if t else None
+    def recoverFromPreorder(self, S: str) -> TreeNode:
+        path, pos = list(), 0
+        while pos < len(S):
+            level = 0
+            while S[pos] == '-':
+                level += 1
+                pos += 1
+            value = 0
+            while pos < len(S) and S[pos].isdigit():
+                value = value * 10 + (ord(S[pos]) - ord('0'))
+                pos += 1
+            node = TreeNode(value)
+            if level == len(path):
+                if path:
+                    path[-1].left = node
+            else:
+                path = path[:level]
+                path[-1].right = node
+            path.append(node)
+        return path[0]
+
