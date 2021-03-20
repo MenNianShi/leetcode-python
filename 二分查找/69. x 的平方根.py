@@ -15,17 +15,16 @@
 # 说明: 8 的平方根是 2.82842...,
 #      由于返回类型是整数，小数部分将被舍去。
 class Solution(object):
-    def mySqrt(self,n):
-        left = 0
-        right = n//2+1
-        while left <= right :
-            mid = left+ (right-left)//2
-            squre = mid*mid
-            if squre>n:
-                right = mid -1
+    def mySqrt(self,x):
+        l, r, ans = 0, x, -1
+        while l <= r:
+            mid = l + (r-l)//2
+            if mid * mid <= x:
+                ans = mid
+                l = mid + 1
             else:
-                left = mid+1
-        return left
+                r = mid - 1
+        return ans
 
     def mySqrt1(self, n):
         """

@@ -9,6 +9,24 @@ class ListNode(object):
          self.val = x
          self.next = None
 
+
+class Solution(object):
+    def deleteDuplicates(self, head):
+        """
+        :type head: ListNode
+        :rtype: ListNode
+        """
+        dummy = ListNode(None, head)
+        pre = dummy
+        while head:
+            if pre.val == head.val:
+                pre.next = head.next
+                head = head.next
+            else:
+                head = head.next
+                pre = pre.next
+
+        return dummy.next
 class Solution(object):
     def deleteDuplicates(self, head):
         """

@@ -1,30 +1,3 @@
-# 给定两个整数，被除数 dividend 和除数 divisor。将两数相除，要求不使用乘法、除法和 mod 运算符。
-#
-# 返回被除数 dividend 除以除数 divisor 得到的商。
-#
-# 整数除法的结果应当截去（truncate）其小数部分，例如：truncate(8.345) = 8 以及 truncate(-2.7335) = -2
-#
-#  
-#
-# 示例 1:
-#
-# 输入: dividend = 10, divisor = 3
-# 输出: 3
-# 解释: 10/3 = truncate(3.33333..) = truncate(3) = 3
-# 示例 2:
-#
-# 输入: dividend = 7, divisor = -3
-# 输出: -2
-# 解释: 7/-3 = truncate(-2.33333..) = -2
-#  
-#
-# 提示：
-#
-# 被除数和除数均为 32 位有符号整数。
-# 除数不为 0。
-# 假设我们的环境只能存储 32 位有符号整数，其数值范围是 [−231,  231 − 1]。本题中，如果除法结果溢出，则返回
-#
-
 class Solution(object):
     def divide(self, dividend, divisor):
         """
@@ -32,20 +5,22 @@ class Solution(object):
         :type divisor: int
         :rtype: int
         """
-        if( abs(dividend) < abs(divisor)) :
-            return 0
-        flag = 0
-        if ((dividend>0 and divisor<0) or (dividend<0 and divisor>0)):
-            flag = 1
+        positive = (dividend < 0) is (divisor < 0)
+        MIN_INT, MAX_INT = -2147483648, 2147483647
 
-        low =0
-        high = dividend
-        cnt = 0
-        while low< high:
-            low = low+divisor
-            if (low <= dividend):
-                cnt+=1
-        if flag ==1 :
-            return -cnt
-        else:
-            return cnt
+        dividend, divisor,= abs(dividend), abs(divisor)
+        res = 0
+        while dividend >= divisor:
+            cur = divisor  # 第一次是cur = divisor
+            multiple = 1
+            while cur + cur < dividend:
+                cur += cur  # 这里是将cur x 2，即直接比较divisor x 2的次方（加快比较速度）
+                multiple += multiple  # 保留divisor的倍数
+            dividend -= cur  # dividend 变为 dividend-cur 进行下一轮while
+            res += multiple
+
+
+
+        if not positive:
+            res = -res
+        return min(max(MIN_INT, res), MAX_INT)
