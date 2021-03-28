@@ -6,23 +6,22 @@
 # 输出: 2
 # 解释: 子数组 [4,3] 是该条件下的长度最小的连续子数组。滑动窗口
 class Solution(object):
-    def minSubArrayLen(self, s, nums):
+    def minSubArrayLen(self, target, nums):
         """
-        :type s: int
+        :type target: int
         :type nums: List[int]
         :rtype: int
         """
-        left = 0
-        right = len(nums)-1
-        result = float('inf')
         ssum = 0
+        start = 0
+        min_length = float('inf')
         for i in range(len(nums)):
-            ssum = nums[i]+ssum
-            while ssum>=s :
-                result = min(result, i - left + 1)
-                ssum -= nums[left]
-                left+=1
-        return  result
+            ssum+= nums[i]
+            while ssum >= target:
+                min_length = min(min_length,i-start+1)
+                ssum -= nums[start]
+                start +=1
+        return  min_length if min_length!= float('inf') else 0
 
 
 import bisect

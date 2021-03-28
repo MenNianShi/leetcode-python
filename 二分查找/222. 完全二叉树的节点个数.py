@@ -63,6 +63,27 @@ class Solution:
         return (2 ** d - 1) + left
 
 
+class Solution:
+    def getDepth(self, root):  # 计算当前树的深度
+        depth = 0
+        while root:
+            depth += 1
+            root = root.left
+        return depth
+
+    def countNodes(self, root: TreeNode) -> int:
+        cnt = 0
+        while root:
+            left = self.getDepth(root.left)  # 左子树深度
+            right = self.getDepth(root.right)  # 右子树深度
+            if left == right:  # 左右子树深度相同，左子树一定是满二叉树，右子树可能为满二叉树，一定为完全二叉树
+                root = root.right
+                cnt += 2 ** left
+            else:  # 左右子树深度不同，右子树一定是满二叉树，左子树可能为满二叉树，一定为完全二叉树
+                root = root.left
+                cnt += 2 ** right
+        return cnt
+
 
 class Solution(object):
     cnt = 0
