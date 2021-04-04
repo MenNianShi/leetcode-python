@@ -72,6 +72,27 @@ class Solution:
                     dp[i][j] = dp[i - 1][j]
 
         return dp[n - 1][target]
+class Solution(object):
+    def canPartition(self, nums):
+        """
+        :type nums: List[int]
+        :rtype: bool
+        """
+        sum_nums = sum(nums)
+        if sum_nums%2!=0:
+            return False
+        half = sum_nums/2
+        cur = []
+        def back(nums):
+            for i in range(len(nums)):
+                cur.append(nums[i])
+                if sum(cur)==half:
+                    return True
+                else:
+                    back(nums[i+1:])
+                cur.pop()
+            return False
+        return back(nums)
 
 
 

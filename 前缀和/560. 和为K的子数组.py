@@ -30,5 +30,24 @@ class Solution(object):
             else:
                 pre_sum[sum_0]=1
         return ans
+class Solution(object):
+    def subarraySum(self, nums, k):
+        """
+        :type nums: List[int]
+        :type k: int
+        :rtype: int
+        """
+        d = {0:1}
+        preSum = 0
+        res = 0
+        for  num in nums:
+            preSum +=num
+            if (preSum-k) in d:
+                res+=d[preSum-k]
+            if preSum not in d:
+                d[preSum]=1
+            else:
+                d[preSum]+=1
+        return res
 a=  Solution()
 print(a.subarraySum([1,1,1],2))

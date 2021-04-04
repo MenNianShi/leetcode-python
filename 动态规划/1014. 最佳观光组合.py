@@ -20,8 +20,7 @@
 # 输入：[8,1,5,2,6]
 # 输出：11
 # 解释：i = 0, j = 2, A[i] + A[j] + i - j = 8 + 5 + 0 - 2 = 11
-
-
+#求最大的  A[i]+A[j]-(j-i) 等于 求 最大的  A[i]+i + A[j]-j。 保持j 不动遍历 i
 class Solution(object):
     def maxScoreSightseeingPair(self, A):
         """

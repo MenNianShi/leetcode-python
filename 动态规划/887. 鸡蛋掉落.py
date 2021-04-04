@@ -9,8 +9,7 @@
 # 你的目标是确切地知道 F 的值是多少。
 #
 # 无论 F 的初始值如何，你确定 F 的值的最小移动次数是多少？
-# https://github.com/MenNianShi/fucking-algorithm/blob/master/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92%E7%B3%BB%E5%88%97/%E9%AB%98%E6%A5%BC%E6%89%94%E9%B8%A1%E8%9B%8B%E8%BF%9B%E9%98%B6.md
-#  
+
 class Solution(object):
     def superEggDrop(self, K, N):
         """
@@ -26,3 +25,72 @@ class Solution(object):
             for k in range(1, K + 1):
                 dp[k][m] = dp[k][m - 1] + dp[k - 1][m - 1] + 1
         return m
+
+
+class Solution(object):
+    def superEggDrop(self, K, N):
+        """
+        :type k: int
+        :type n: int
+        :rtype: int
+        """
+        memo = dict()
+
+        def dp(K, N):
+            # base case
+            if K == 1: return N
+            if N == 0: return 0
+            # 避免重复计算
+            if (K, N) in memo:
+                return memo[(K, N)]
+
+            res = float('INF')
+            # 穷举所有可能的选择
+            for i in range(1, N + 1):
+                res = min(res,
+                          max(
+                              dp(K, N - i),
+                              dp(K - 1, i - 1)
+                          ) + 1
+                          )
+            # 记入备忘录
+            memo[(K, N)] = res
+            return res
+
+        return dp(K, N)
+
+
+class Solution(object):
+    def superEggDrop(self, K, N):
+        """
+        :type k: int
+        :type n: int
+        :rtype: int
+        """
+        memo = dict()
+
+        def dp(K, N):
+            if K == 1: return N
+            if N == 0: return 0
+            if (K, N) in memo:
+                return memo[(K, N)]
+
+            res = float('INF')
+            # 用二分搜索代替线性搜索
+            lo, hi = 1, N
+            while lo <= hi:
+                mid = (lo + hi) // 2
+                broken = dp(K - 1, mid - 1)  # 碎
+                not_broken = dp(K, N - mid)  # 没碎
+                # res = min(max(碎，没碎) + 1)
+                if broken > not_broken:
+                    hi = mid - 1
+                    res = min(res, broken + 1)
+                else:
+                    lo = mid + 1
+                    res = min(res, not_broken + 1)
+
+            memo[(K, N)] = res
+            return res
+
+        return dp(K, N)

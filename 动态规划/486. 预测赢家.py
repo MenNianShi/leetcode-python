@@ -13,10 +13,10 @@
 # 所以，玩家 1 的最终分数为 1 + 2 = 3，而玩家 2 为 5 。
 # 因此，玩家 1 永远不会成为赢家，返回 False 。
 
-#dp[i][j] 表示当数组剩下的部分为下标 ii 到下标 jj 时，当前玩家与另一个玩家的分数之差的最大值，注意当前玩家不一定是先手
+#dp[i][j] 表示当数组剩下的部分为下标 i 到下标 j 时，当前玩家与另一个玩家的分数之差的最大值，注意当前玩家不一定是先手
 
 class Solution:
-    def PredictTheWinner(self, nums: List[int]) -> bool:
+    def PredictTheWinner(self, nums):
         length = len(nums)
         dp = [[0] * length for _ in range(length)]
         for i, num in enumerate(nums):

@@ -54,7 +54,7 @@ class Solution(object):
                 hashlist[0]=hashlist[i]
                 shift(0,k)
         return [hashlist[i][0] for i in range(k)]
-
+import collections
 class Solution(object):
     def topKFrequent(self, nums, k):
         """
@@ -62,9 +62,7 @@ class Solution(object):
         :type k: int
         :rtype: List[int]
         """
-        s = collections.defaultdict(int)
-        for num in nums:
-            s[num] +=1
+        s = collections.Counter(nums)
         res = []
         for key,v in s.items():
             res.append([key,v])

@@ -18,29 +18,25 @@
 # 动态规划
 # 此题和《最大回文子串》基本一样
 
-
-class Solution:
-    def countSubstrings(self, s: str) -> int:
-        length = len(s)
-        if length == 0:
-            return 0
-        if length == 1:
-            return 1
-        dp = [[False for a in range(length)] for a in range(length)]
-        dp[-1][-1] = True
-        ans = 1
-        for i in range(length - 1):  # 初始化长度为1和2的子串
-            dp[i][i] = True
-            ans += 1
-            if s[i] == s[i + 1]:
-                dp[i][i + 1] = True
-                ans += 1
-
-        for l in range(2, length):
-            for i in range(0, length - l):
-                j = i + l
-                if dp[i + 1][j - 1] and s[i] == s[j]:
+class Solution(object):
+    def countSubstrings(self, s):
+        """
+        :type s: str
+        :rtype: int
+        """
+        n = len(s)
+        dp = [[False] * n for _ in range(n)]
+        cnt= 0
+        for k in range(n):
+            for i in range(n-k):
+                j = i+k
+                if k==0 :  # 长度为1 的情况
                     dp[i][j] = True
-                    ans += 1
-        return ans
+                elif k==1: # 长度为2 的情况
+                    dp[i][j] = s[i]==s[j]
+                else:
+                    dp[i][j] = dp[i+1][j-1] and s[i]==s[j]
+                if dp[i][j]: cnt+=1
+        return cnt
+
 

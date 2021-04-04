@@ -29,7 +29,7 @@ class Solution:
         dp=[[False]*(len2+1) for i in range(len1+1)]
         dp[0][0]=True
         for i in range(1,len1+1):
-            dp[i][0]=(dp[i-1][0] and s1[i-1]==s3[i-1])
+            dp[i][0]=(dp[i-1][0] and s1[i-1]==s3[i-1])  # 因为从0开始计数 所以此处是 s1[i-1]==s3[i-1]  而不是 s1[i]==s3[i]
         for i in range(1,len2+1):
             dp[0][i]=(dp[0][i-1] and s2[i-1]==s3[i-1])
         for i in range(1,len1+1):
