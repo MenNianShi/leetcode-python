@@ -30,6 +30,7 @@ class Solution(object):
         for k in range(n):
             for i in range(n-k):
                 j = i+k
+                print(i,j)
                 if k==0 :  # 长度为1 的情况
                     dp[i][j] = True
                 elif k==1: # 长度为2 的情况
@@ -38,5 +39,28 @@ class Solution(object):
                     dp[i][j] = dp[i+1][j-1] and s[i]==s[j]
                 if dp[i][j]: cnt+=1
         return cnt
+a= Solution()
+print(a.countSubstrings('aaa'))
 
-
+class Solution(object):
+    def countSubstrings(self, s):
+        """
+        :type s: str
+        :rtype: int
+        """
+        n = len(s)
+        dp = [[False]*n for _ in range(n)]
+        cnt=0
+        for i in range(n):
+            for j in range(i,n):
+                print(i,j)
+                if i==j:
+                    dp[i][j] = True
+                elif j-i==1:
+                    dp[i][j] = s[i]==s[j]
+                else:
+                    dp[i][j] = dp[i+1][j-1] and s[i]==s[j]
+                if dp[i][j] : cnt+=1
+        return cnt
+a = Solution()
+print(a.countSubstrings('aaa'))
