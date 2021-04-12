@@ -6,10 +6,13 @@ class TreeNode(object):
          self.right = None
 
 
-class Solution:
+class Solution(object):
     res, prev = float("inf"), float("-inf")
-    # pre 存储前一个节点
-    def getMinimumDifference(self, root):
+    def minDiffInBST(self, root):
+        """
+        :type root: TreeNode
+        :rtype: int
+        """
         def dfs(root):
             if not root:
                 return
@@ -35,3 +38,6 @@ class Solution(object):
             return l
         l = inorder(root, [])
         return min([l[i + 1] - l[i] for i in range(len(l) - 1)])
+
+
+
