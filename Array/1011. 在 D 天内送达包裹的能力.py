@@ -11,7 +11,7 @@ class Solution(object):
     def canship(self,target,weights,D):
         cur = target
         for weight in weights:
-            if weight>target:
+            if weight > target:
                 return False
             if cur < weight:
                 cur = target
