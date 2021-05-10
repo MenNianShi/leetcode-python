@@ -15,7 +15,7 @@ def twoSum(numbers, target):
 
 
 class Solution:
-    def twoSum(self, numbers: List[int], target: int) -> List[int]:
+    def twoSum(self, numbers, target: int):
         n = len(numbers)
         for i in range(n):
             low, high = i + 1, n - 1
@@ -30,7 +30,6 @@ class Solution:
 
         return [-1, -1]
 
-]
 print(twoSum([2, 7, 11, 15],9))
 def twoSum(numbers,target):
     num_dict = {}
