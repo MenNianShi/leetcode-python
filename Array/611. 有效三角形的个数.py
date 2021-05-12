@@ -17,6 +17,7 @@ class Solution:
         # 但这道题可以只做一种判断，首先是先排序，固定右边最长边i，从左边找到nums[l]+nums[r]>nums[i]即可
         # 因为nums[i]最长，若有上式满足，那么也必有nums[l]+nums[i]>nums[r]和nums[r]+nums[i]>nums[l]
         # l = 0 and r = i - 1, i∈[2, len(nums) - 1]
+        #固定最大边 i 如果left + right > i 那么会有right - left 个满足
 
         if len(nums) < 3:
             return 0
@@ -33,3 +34,7 @@ class Solution:
                 else:
                     l += 1
         return ret
+
+
+a = Solution()
+print(a.triangleNumber([2, 2, 3, 4]))
