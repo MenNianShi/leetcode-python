@@ -24,6 +24,7 @@ class Solution:
 
         nums = sorted(nums)
         ret = 0
+        #for i in range(len(nums)-1,1,-1):
         for i in reversed(range(2, len(nums))):
             l = 0
             r = i - 1
