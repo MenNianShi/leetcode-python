@@ -44,3 +44,10 @@ def approximate_auc(labels, preds, n_bins=100):
         accumulated_neg += neg_histogram[i]
 
     return satisfied_pair / float(total_pair)
+
+import wget
+
+print("downloading with urllib")
+url = 'http://archive.ics.uci.edu/ml/machine-learning-databases/abalone/abalone.data'
+print("downloading with urllib")
+wget.download(url,"./")
