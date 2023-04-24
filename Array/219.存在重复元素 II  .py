@@ -34,6 +34,22 @@ class Solution(object):
             else:
                 num_map[nums[i]] = i
         return False
+class Solution(object):
+    def containsNearbyDuplicate(self, nums, k):
+        """
+        :type nums: List[int]
+        :type k: int
+        :rtype: bool
+        """
+        nums_dict = {}
+        for i in range(len(nums)):
+            if nums[i] not in nums_dict:
+                nums_dict[nums[i]] = i
+            else:
+                if i - nums_dict[nums[i]] <= k:
+                    return True
+                nums_dict[nums[i]] = i
+        return False
 a =Solution()
-print(a.containsNearbyDuplicate([1,2,1],0))
+print(a.containsNearbyDuplicate([1,0,1,1],1))
 
