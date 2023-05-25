@@ -1,7 +1,6 @@
 #动态规划 同494。目标和
 # 定义二维布尔数组 dp，其中dp[i+1][j] 表示前 ii 个石头能否凑出重量 jj。特别地，dp[0][] 为不选任何石头的状态，因此除了
 # dp[0][0] 为真，其余 dp[0][j] 全为假。
-。
 class Solution(object):
     def lastStoneWeightII(self, stones):
         """
