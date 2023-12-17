@@ -34,29 +34,29 @@ class Solution(object):
                 left = mid+1
         return left
 
-class Solution1(object):
+class Solution(object):
     def findPeakElement(self, nums):
         """
         :type nums: List[int]
         :rtype: int
         """
-        left =0
-        right = len(nums)-1
-        if len(nums) ==1:
-            return 0
-        if len(nums)>=2:
-            if nums[-1]>nums[-2]:
-                return len(nums)-1
-            if nums[0]>nums[1]:
-                return 0
-        while left <= right :
-            mid = left+ (right-left)//2
-            if nums[mid-1]<nums[mid] and nums[mid] >nums[mid+1]:
+        n = len(nums)
+
+        left = 0
+        right = n-1
+        ans = -1
+        def get(i):
+            if i==-1 or i==n:
+                return float('-inf')
+            else:
+                return nums[i]
+
+        while left <= right:
+            mid = left + (right - left)//2
+            if get(mid-1) < get(mid) > get(mid+1):
                 return mid
-            elif nums[left] <= nums[mid] < nums[right]:
+            if get(mid) < get(mid+1):
                 left = mid+1
-            elif nums[left] > nums[mid] >= nums[right]:
+            else:
                 right = mid -1
-            else:right = right-1
-a =Solution()
-print(a.findPeakElement([1,2,3,4,3]))
+        return ans
