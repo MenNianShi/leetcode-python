@@ -18,37 +18,21 @@ class TreeNode(object):
          self.right = None
 
 class Solution(object):
-    count = 0
-
+    res = 0
     def diameterOfBinaryTree(self, root):
         """
         :type root: TreeNode
         :rtype: int
         """
-        self.getDepth(root)
-        return self.count
-
-
-    def getDepth(self,root):
-        if root == None:
+        self.getdepth(root)
+        return self.res
+    def getdepth(self, root):
+        if root ==None:
             return 0
-        left = self.getDepth(root.left)
-        right = self.getDepth(root.right)
-        temp = left + right
-        if temp>self.count:
-            self.count = temp
-        return max(left,right)+1
-
-
-class Solution(object):
-    def diameterOfBinaryTree(self, root):
-        self.s = 0
-        self.dfs(root)
-        return self.s
-
-    def dfs(self, root):
-        if not root: return 0
-        l = self.dfs(root.left)
-        r = self.dfs(root.right)
-        self.s = max(self.s, l + r)
-        return max(l, r) + 1
+        else:
+            # 求当前节点的左右子树深度
+            leftdepth = self.getdepth(root.left)
+            rightdepth = self.getdepth(root.right)
+            cur = leftdepth + rightdepth + 1
+            self.res = max(self.res, cur - 1) # 直径 = 深度 - 1
+            return max(leftdepth , rightdepth) + 1 # 深度 = 子树深度 + 1

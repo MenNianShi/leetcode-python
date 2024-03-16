@@ -142,3 +142,22 @@ class Solution:
         return res
 
 
+
+
+class Solution(object):
+    res  = []
+    def inorderTraversal(self, root):
+        """
+        :type root: TreeNode
+        :rtype: List[int]
+        """
+
+        if root == None:
+            return
+        self.inorderTraversal(root.left)
+        self.res.append(root.val)
+        self.inorderTraversal(root.right)
+        return self.res
+a= Solution()
+root = TreeNode(1)
+print(a.inorderTraversal(root))

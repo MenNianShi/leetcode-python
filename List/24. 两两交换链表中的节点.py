@@ -15,7 +15,7 @@ class ListNode(object):
         self.val = val
         self.next = next
 class Solution:
-    def swapPairs(self, head: ListNode) -> ListNode:
+    def swapPairs(self, head):
         if not head or not head.next:
             return head
         newHead = head.next
@@ -24,17 +24,30 @@ class Solution:
         return newHead
 
 
-class Solution:
-    def swapPairs(self, head) :
-        dummyHead = ListNode(0)
-        dummyHead.next = head
-        temp = dummyHead
-        while temp.next and temp.next.next:
-            node1 = temp.next
-            node2 = temp.next.next
-            temp.next = node2
-            node1.next = node2.next
-            node2.next = node1
-            temp = node1
-        return dummyHead.next
+class Solution(object):
+    def swapPairs(self, head):
+        """
+        :type head: ListNode
+        :rtype: ListNode
+        """
+        dummy = ListNode(0)
+        dummy.next = head
+        pre = dummy
+        while pre != None:
+            self.swapPair(pre)
+            if pre.next:
+                pre = pre.next.next
+            else:
+                break
+        return dummy.next
 
+    def swapPair(self, head):
+        # 交换接下来两个节点
+        if head.next and head.next.next:
+            q = head.next
+            p = head.next.next
+            nxt = p.next
+            head.next = p
+            p.next = q
+            q.next = nxt
+        return head

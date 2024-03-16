@@ -97,3 +97,48 @@ lRUCache.get(1)
 lRUCache.get(3)
 lRUCache.get(4)
 print(1)
+import  collections
+class LRUCache(object):
+
+    def __init__(self, capacity):
+        """
+        :type capacity: int
+        """
+        self.capacity = capacity
+        self.dict_kv = collections.defaultdict(int)
+        self.k_list = []
+
+
+    def get(self, key):
+        """
+        :type key: int
+        :rtype: int
+        """
+        if key not in self.dict_kv:
+            return -1
+        else:
+            # 当前key 移到最尾部
+            self.k_list.remove(key)
+            self.k_list.append(key)
+            return self.dict_kv[key]
+
+
+    def put(self, key, value):
+        """
+        :type key: int
+        :type value: int
+        :rtype: None
+        """
+        if key not in self.dict_kv:
+            if len(self.dict_kv) < self.capacity:
+                self.k_list.append(key)
+                self.dict_kv[key] = value
+            else:
+                to_remove = self.k_list.pop(0)
+                self.k_list.append(key)
+                self.dict_kv.pop(to_remove)
+                self.dict_kv[key] = value
+        else :
+            self.k_list.remove(key)
+            self.k_list.append(key)
+            self.dict_kv[key] = value

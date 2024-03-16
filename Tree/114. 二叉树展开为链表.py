@@ -2,18 +2,29 @@
 #
 
 
-class Solution:
+class Solution(object):
     def flatten(self, root):
-        curr = root
-        while curr:
-            if curr.left:
-                pre = nxt = curr.left
-                while pre.right :
+        """
+        :type root: TreeNode
+        :rtype: None Do not return anything, modify root in-place instead.
+        """
+        while root != None:
+            if root.left == None:
+                # 左子树为 null，直接考虑下一个节点
+                root = root.right
+            else :
+                # 找左子树最右边的节点
+                pre = root.left
+                while pre.right != None:
                     pre = pre.right
-                pre.right = curr.right
-                curr.left = None
-                curr.right = nxt
-            curr = curr.right
+                # 将原来的右子树接到左子树的最右边节点
+                pre.right = root.right
+                # 将左子树插入到右子树的地方
+                root.right = root.left
+                root.left = None
+                # 考虑下一个节点
+                root = root.right
+
 
 
 class Solution:

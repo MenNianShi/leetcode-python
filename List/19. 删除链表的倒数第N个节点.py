@@ -6,17 +6,23 @@ class ListNode(object):
 
 
 class Solution:
+    # 用栈
     def removeNthFromEnd(self, head, n):
-        # write code here
-        dummy = ListNode(0)
-        dummy.next = head
-        fast = dummy
-        slow = dummy
-        for i in range(n):
-            fast = fast.next
-        while fast.next != None:
-            fast = fast.next
-            slow = slow.next
-        slow.next = slow.next.next
+        """
+        :type head: ListNode
+        :type n: int
+        :rtype: ListNode
+        """
+        dummy = ListNode(0, head)
+        stack = list()
+        cur = dummy
+        while cur:
+            stack.append(cur)
+            cur = cur.next
 
+        for i in range(n):
+            stack.pop()
+
+        prev = stack[-1]
+        prev.next = prev.next.next
         return dummy.next
