@@ -30,3 +30,4 @@ class Solution: #DFS + backtraveling
         return True
     def solveSudoku(self, board):
         self.dfs(board)
+# 37. 解数独.py

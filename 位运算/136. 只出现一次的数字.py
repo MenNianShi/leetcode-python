@@ -6,3 +6,5 @@ class Solution:
         for i in range(1, len(nums)):
             nums[0] ^= nums[i]
         return nums[0]
+
+# 136. 只出现一次的数字.py

@@ -22,3 +22,4 @@ def addDigits(self, num):
         return 9
     else:
         return num % 9
+# 258.各位相加  .py

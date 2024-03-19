@@ -40,3 +40,5 @@ class Solution(object):
         for j in xrange(i, len(nums)):
             nums[j] = 0
 
+
+# 283.移动零  .py

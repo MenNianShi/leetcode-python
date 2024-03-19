@@ -7,3 +7,4 @@ class Solution(object):
             ans.append(hexs[num % 16])
             num = num/16
         return ''.join(ans[::-1]) if ans else '0'
+# 405.数字转换为十六进制数  .py

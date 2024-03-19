@@ -36,3 +36,5 @@ class MyHashSet:
     def contains(self, key):
         hashkey = self.hash(key)
         return key in self.table[hashkey]
+
+# 705. 设计哈希集合.py

@@ -16,3 +16,4 @@ class Solution(object):
                 t += max(0,(vat[i] + k - 1) // k - bucket[i])
             res = min(res,  t + k)
         return int(res) 
+# LCP 33. 蓄水.py

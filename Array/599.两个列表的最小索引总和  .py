@@ -40,3 +40,5 @@ def findRestaurant(self, list1, list2):
                 sol.append(s)
 
     return sol
+
+# 599.两个列表的最小索引总和  .py

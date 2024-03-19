@@ -18,3 +18,4 @@ def findRelativeRanks(nums):
     return nums
 
 print(findRelativeRanks([10,3,8,9,4]))
+# 506.相对名次  .py

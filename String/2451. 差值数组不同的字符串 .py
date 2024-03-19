@@ -13,3 +13,5 @@ class Solution:
                 if diff0 != get(words[i]):
                     return words[i]
         return words[1] if diff0 == get(words[2]) else words[0]
+
+# 2451. 差值数组不同的字符串 .py

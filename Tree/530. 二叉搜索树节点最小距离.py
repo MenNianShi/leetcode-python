@@ -41,3 +41,5 @@ class Solution(object):
 
 
 
+
+# 530. 二叉搜索树节点最小距离.py

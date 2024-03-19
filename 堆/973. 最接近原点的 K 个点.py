@@ -48,3 +48,5 @@ class Solution:
         return ans
 
 
+
+# 973. 最接近原点的 K 个点.py

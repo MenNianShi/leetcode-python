@@ -50,3 +50,5 @@ class Solution(object):
         return True
 a = Solution()
 print(a.wordPattern("jquery","jquery"))
+
+# 290.单词规律.py

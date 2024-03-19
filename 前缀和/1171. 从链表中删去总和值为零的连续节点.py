@@ -50,3 +50,4 @@ class Solution(object):
             head.next = seen[prefix].next
             head = head.next
         return dummy.next
+# 1171. 从链表中删去总和值为零的连续节点.py

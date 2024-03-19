@@ -38,3 +38,4 @@ def get_two_sum_enums(numbers, target):
             n += mark[target - value]
     return n
 print(get_two_sum_enums([-3,-2,-1,-1,-1,0,1,2,2,2,3],1))
+# 有序重复数组两数之和个数.py

@@ -27,3 +27,5 @@ class Solution:
 
         return min(f[n - 1])
 
+
+# 120. 三角形最小路径和.py

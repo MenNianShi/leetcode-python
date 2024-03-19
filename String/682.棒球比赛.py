@@ -35,3 +35,4 @@ class Solution:
                 point_list.append(int(op))
 
         return sum(point_list)
+# 682.棒球比赛.py

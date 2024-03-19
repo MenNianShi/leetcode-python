@@ -48,3 +48,4 @@ class Solution(object):
         return maxLength
 a = Solution()
 print(a.findLengthOfLCIS([2,2,2,2,2]))
+# 674.最长连续递增序列  .py

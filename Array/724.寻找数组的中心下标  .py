@@ -45,3 +45,4 @@ class Solution(object):
         return -1
 a = Solution()
 print(a.pivotIndex([-1,-1,-1,-1,-1,-1]))
+# 724.寻找数组的中心下标  .py

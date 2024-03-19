@@ -16,3 +16,4 @@ class Solution(object):
 
 a = Solution()
 print(a.peakIndexInMountainArray([3,4,5,1]))
+# 852. 山脉数组的峰顶索引.py

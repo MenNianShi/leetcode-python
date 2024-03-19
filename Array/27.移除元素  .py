@@ -54,3 +54,5 @@ class Solution(object):
                     front += 1
         nums = nums[0:front]
         return front
+
+# 27.移除元素  .py

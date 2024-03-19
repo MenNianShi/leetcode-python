@@ -41,3 +41,4 @@ def nextGreaterElement(self, findNums, nums):
             greater[stack.pop()] = n
         stack.append(n)
     return [greater[n] if n in greater else -1 for n in findNums]
+# 496.下一个更大元素 I .py

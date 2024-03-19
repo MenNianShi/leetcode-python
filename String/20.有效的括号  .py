@@ -57,3 +57,4 @@ class Solution(object):
             return True
         else:
             return False
+# 20.有效的括号  .py

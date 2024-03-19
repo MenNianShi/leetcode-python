@@ -29,3 +29,4 @@ obj.push(x)
 param_2 = obj.pop()
 param_3 = obj.peek()
 param_4 = obj.empty()
+# 232.用栈实现队列.py

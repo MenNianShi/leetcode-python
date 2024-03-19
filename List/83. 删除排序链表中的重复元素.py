@@ -40,3 +40,4 @@ class Solution(object):
             else:
                 p = p.next
         return head
+# 83. 删除排序链表中的重复元素.py

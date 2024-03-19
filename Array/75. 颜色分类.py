@@ -36,3 +36,5 @@ class Solution:
                 p0 += 1
                 p1 += 1
 
+
+# 75. 颜色分类.py

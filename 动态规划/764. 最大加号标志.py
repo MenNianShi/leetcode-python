@@ -74,3 +74,4 @@ class Solution(object):
                 cur_max_k = min(up,down,left,right)
                 res = max(cur_max_k,res)
         return res
+# 764. 最大加号标志.py

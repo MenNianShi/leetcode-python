@@ -45,3 +45,5 @@ class Solution:
         for i in range(k + 1):
             res[i] = shorter * (k - i) + longer * i
         return res
+
+# 面试题 16.11. 跳水板.py

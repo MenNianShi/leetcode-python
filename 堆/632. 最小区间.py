@@ -23,3 +23,4 @@ class Solution:
             elif ma - mi == res[1] - res[0] and mi < res[0]:
                 res = [mi, ma]
         return res
+# 632. 最小区间.py

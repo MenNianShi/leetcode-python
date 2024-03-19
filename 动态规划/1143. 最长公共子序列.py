@@ -20,3 +20,4 @@ class Solution(object):
         return dp[m][n]
 a = Solution()
 print(a.longestCommonSubsequence("abcde","ace"))
+# 1143. 最长公共子序列.py

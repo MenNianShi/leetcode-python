@@ -48,3 +48,4 @@ def twoSum( nums, target):
                 continue
             return hmap[n][0], hmap[target - n][-1] #此处-1使去两数相同情况的后一个数
 print(twoSum([4,5,6,7,8,9,9],17))
+# 1.两数之和.py

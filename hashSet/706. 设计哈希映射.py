@@ -59,3 +59,5 @@ class MyHashMap:
 # obj.put(key,value)
 # param_2 = obj.get(key)
 # obj.remove(key)
+
+# 706. 设计哈希映射.py

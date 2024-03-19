@@ -12,3 +12,5 @@ def find_lcsubstr(s1, s2):
                 mmax = dp[i + 1][j + 1]
                 p = i + 1
     return s1[p - mmax:p], mmax  # 返回最长子串及其长度
+
+# 最长公共子串.py

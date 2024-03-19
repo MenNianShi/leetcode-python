@@ -28,3 +28,5 @@ class Solution:
 
         return f[n - 1][2]
 
+
+# LCP 19. 秋叶收藏集.py

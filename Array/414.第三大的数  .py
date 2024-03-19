@@ -57,3 +57,4 @@ class Solution(object):
 
 a = Solution()
 print(a.thirdMax([1,2,3]))
+# 414.第三大的数  .py

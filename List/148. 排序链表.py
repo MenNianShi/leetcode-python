@@ -21,3 +21,5 @@ class Solution(object):
             array[i - 1].next = array[i]
         array[-1].next = None
         return array[0]
+
+# 148. 排序链表.py

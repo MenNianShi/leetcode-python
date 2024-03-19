@@ -67,3 +67,4 @@ class Solution(object):
 
 a = Solution()
 print(a.nextGreaterElement([4,1,2],[1,3,4,2]))
+# 496. 下一个更大元素 I.py

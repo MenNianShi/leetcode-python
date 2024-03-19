@@ -32,3 +32,4 @@ class Solution(object):
         return ans
 a =Solution()
 print(a.longestWord( ["a", "banana", "app", "appl", "ap", "apply", "apple"]))
+# 720.词典中最长的单词.py

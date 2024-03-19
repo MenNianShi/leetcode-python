@@ -52,3 +52,4 @@ class Solution(object):
         else:
             ans=str(10**(i-1)+n/i)
             return int(ans[mod-1])
+# 400.第 N 位数字 .py

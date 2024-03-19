@@ -30,3 +30,5 @@ def convertToBase7(num):
         s = '-'+str(num)+s
         return s
 print(convertToBase7(-7))
+
+# 504.七进制数 .py

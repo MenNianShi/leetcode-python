@@ -48,3 +48,4 @@ class Solution(object):
             return min(index)
         else:
             return -1
+# 387.字符串中的第一个唯一字符.py

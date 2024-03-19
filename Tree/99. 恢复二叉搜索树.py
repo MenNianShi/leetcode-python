@@ -60,3 +60,5 @@ class Solution:
         dfs(root)
         arr[1].val,arr[2].val=arr[2].val,arr[1].val
 
+
+# 99. 恢复二叉搜索树.py

@@ -19,3 +19,4 @@ def gen():
         i=i+1
 for i in gen():
     print(i)
+# 344.反转字符串.py

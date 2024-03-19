@@ -47,3 +47,4 @@ class Solution(object):
         return len(intervals) - cnt
 a = Solution()
 print(a.eraseOverlapIntervals([[1,100],[11,22],[1,11],[2,12]]))
+# 435. 无重叠区间.py

@@ -39,3 +39,5 @@ class Solution:
 
 a = Solution()
 print(a.triangleNumber([2, 2, 3, 4]))
+
+# 611. 有效三角形的个数.py

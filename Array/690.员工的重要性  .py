@@ -45,3 +45,5 @@ class Solution(object):
 
         return self.dfs(id, emp_map)
 
+
+# 690.员工的重要性  .py

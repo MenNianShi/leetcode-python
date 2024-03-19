@@ -33,3 +33,4 @@ class Solution(object):
         return arr
 a = Solution()
 print(a.sortByBits(arr))
+# 1356. 根据数字二进制下 1 的数目排序.py

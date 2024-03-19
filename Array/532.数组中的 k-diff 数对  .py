@@ -64,3 +64,4 @@ class Solution(object):
             return 0
 a = Solution()
 print(a.findPairs([1, 3, 1, 5, 4],0))
+# 532.数组中的 k-diff 数对  .py

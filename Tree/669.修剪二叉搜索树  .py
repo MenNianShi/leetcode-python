@@ -62,3 +62,5 @@ class Solution(object):
             root.left = self.trimBST(root.left,L,R)
             root.right = self.trimBST(root.right,L,R)
             return root
+
+# 669.修剪二叉搜索树  .py

@@ -39,3 +39,5 @@ class Solution(object):
             res = max(res, cnt[word])
         return res
 
+
+# 1048. 最长字符串链.py

@@ -41,3 +41,4 @@ class Solution(object):
             if abs(cur - target) < diff:
                 ans, diff = i, abs(cur - target)
         return ans
+# 1300. 转变数组后最接近目标值的数组和.py

@@ -61,3 +61,5 @@ class Solution(object):
                     ans = 0
                     break
             return bool(ans)
+
+# 242.有效的字母异位词.py

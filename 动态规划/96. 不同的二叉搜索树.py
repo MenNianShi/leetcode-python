@@ -51,3 +51,5 @@ class Solution(object):
             C = C * 2*(2*i+1)/(i+2)
         return int(C)
 
+
+# 96. 不同的二叉搜索树.py

@@ -28,3 +28,4 @@ class Solution(object):
             if area%mid==0:
                 return[int(area/mid),int(mid)]
             mid-=1
+# 492.构造矩形  .py

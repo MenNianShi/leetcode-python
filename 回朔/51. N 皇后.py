@@ -34,3 +34,5 @@ class Solution:
         backtrack(0)
         return solutions
 
+
+# 51. N 皇后.py

@@ -21,3 +21,5 @@ class Solution(object):
             root.val = self.total
             self.dfs(root.left, self.total)
 
+
+# 1038. 从二叉搜索树到更大和树.py

@@ -39,3 +39,4 @@ class SmallestInfiniteSet(object):
 # obj = SmallestInfiniteSet()
 # param_1 = obj.popSmallest()
 # obj.addBack(num)
+# 2336. 无限集中的最小数字.py

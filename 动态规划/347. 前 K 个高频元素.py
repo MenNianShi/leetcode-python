@@ -74,3 +74,4 @@ class Solution(object):
 a = Solution()
 print(a.topKFrequent([1,1,1,2,2,3]
 ,2))
+# 347. 前 K 个高频元素.py

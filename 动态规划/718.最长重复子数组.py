@@ -10,3 +10,5 @@ class Solution(object):
                     memo[i][j] = memo[i+1][j+1]+1
         return max(max(row) for row in memo)
 
+
+# 718.最长重复子数组.py

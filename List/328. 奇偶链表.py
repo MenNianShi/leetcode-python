@@ -34,3 +34,4 @@ class Solution(object):
             even = even.next
         odd.next = evenHead
         return head
+# 328. 奇偶链表.py

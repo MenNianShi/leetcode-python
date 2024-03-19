@@ -22,3 +22,4 @@ class Solution(object):
         :rtype: List[int]
         """
         return list(set(nums1).intersection(set(nums2)))
+# 349.两个数组的交集  .py

@@ -18,3 +18,4 @@ def removeDuplicates( nums):
     return  j+1
 nums = [1,1,2]
 print(removeDuplicates(nums))
+# 26.删除数组中重复元素.py

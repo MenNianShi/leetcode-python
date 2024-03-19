@@ -32,3 +32,4 @@ class Solution(object):
                     total += num / div
             div += 1
         return num > 1 and total == num
+# 507.完美数.py

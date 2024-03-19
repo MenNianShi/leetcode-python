@@ -35,3 +35,4 @@ def findDisappearedNumbers(self, nums):
     l = len(nums)+1
     nums = set(nums)
     return [i for i in range(1, l) if i not in nums]
+# 448.找到所有数组中消失的数字  .py

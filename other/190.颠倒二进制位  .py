@@ -23,3 +23,4 @@ class Solution:
         pad = (32 - len(res) + 2) * "0"
         # print res
         return int(res[0:2] + res[2:][::-1] + pad, 2)
+# 190.颠倒二进制位  .py

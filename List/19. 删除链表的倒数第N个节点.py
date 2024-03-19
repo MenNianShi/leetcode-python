@@ -26,3 +26,4 @@ class Solution:
         prev = stack[-1]
         prev.next = prev.next.next
         return dummy.next
+# 19. 删除链表的倒数第N个节点.py

@@ -56,3 +56,5 @@ class Solution(object):
                 s.add(n)
                 n = helper(n)
         return True
+
+# 202.快乐数  .py

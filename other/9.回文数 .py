@@ -39,3 +39,5 @@ class Solution(object):
             y = y*10 + tmp%10
             tmp = tmp/10
         return y == x
+
+# 9.回文数 .py

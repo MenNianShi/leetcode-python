@@ -40,3 +40,5 @@ class Solution(object):
             if abs(result - lastvalue) < eps:
                 break
         return int(result)
+
+# 69. x 的平方根.py

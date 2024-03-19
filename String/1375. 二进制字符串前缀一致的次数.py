@@ -36,3 +36,4 @@ class Solution(object):
 
 a = Solution()
 print(a.numTimesAllBlue([3,2,4,1,5]))
+# 1375. 二进制字符串前缀一致的次数.py

@@ -26,3 +26,5 @@ class Solution(object):
             return -1
 a = Solution()
 print(a.dominantIndex([1, 2, 3, 4]))
+
+# 748.最短补全词 .py

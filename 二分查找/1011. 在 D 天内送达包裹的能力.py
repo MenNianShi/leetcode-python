@@ -44,3 +44,4 @@ class Solution(object):
                 D-=1
             cur = cur -weight
         return D>0
+# 1011. 在 D 天内送达包裹的能力.py

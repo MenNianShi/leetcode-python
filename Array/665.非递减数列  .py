@@ -56,3 +56,5 @@ class Solution(object):
                         return False
         return True
 
+
+# 665.非递减数列  .py

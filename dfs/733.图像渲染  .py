@@ -111,3 +111,4 @@ class Solution(object):
         return image
 a = Solution()
 print(a.floodFill([[1,1,1],[1,1,0],[1,0,1]],1,1,2))
+# 733.图像渲染  .py

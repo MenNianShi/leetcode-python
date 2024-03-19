@@ -18,3 +18,4 @@ class Solution(object):
     def majorityElement(self, nums):
         nums.sort()
         return nums[len(nums)//2]
+# 169.多数元素  .py

@@ -26,3 +26,5 @@ class Solution:
                 dp[i][j] = max(nums[i] - dp[i + 1][j], nums[j] - dp[i][j - 1])
         return dp[0][length - 1] >= 0
 
+
+# 486. 预测赢家.py

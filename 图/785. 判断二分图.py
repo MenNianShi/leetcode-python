@@ -80,3 +80,4 @@ class Solution:
             elif self.color[neighbor] != cNei:
                 self.valid = False
                 return
+# 785. 判断二分图.py

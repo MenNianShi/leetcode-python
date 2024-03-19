@@ -44,3 +44,5 @@ class Solution(object):
             max_num = max(max_num, tmp)
         return ret + max_num
 
+
+# 1052. 爱生气的书店老板.py

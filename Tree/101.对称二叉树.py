@@ -57,3 +57,5 @@ class Solution(object):#迭代方法
             lefts.extend([left.left, left.right])
             rights.extend([right.right, right.left])
         return True
+
+# 101.对称二叉树.py

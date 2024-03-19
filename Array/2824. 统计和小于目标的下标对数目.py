@@ -15,3 +15,4 @@ class Solution(object):
             res += j-i
             i+=1
         return res
+# 2824. 统计和小于目标的下标对数目.py

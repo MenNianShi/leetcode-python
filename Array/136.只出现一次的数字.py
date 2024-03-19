@@ -28,3 +28,4 @@ def singleNumber(nums):
     for num in nums:
         n = n ^ num
     return n
+# 136.只出现一次的数字.py

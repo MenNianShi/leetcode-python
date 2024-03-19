@@ -82,3 +82,5 @@ class Solution(object):
         return True
 a =Solution()
 print(a.minWindow("ADOBECODEBANC","ABC"))
+
+# 76. 最小覆盖子串.py

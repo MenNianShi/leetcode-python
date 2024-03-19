@@ -32,3 +32,4 @@ class Solution(object):
         return b
 a = Solution()
 print(a.fibonacci(6))
+# 191.位1的个数  .py

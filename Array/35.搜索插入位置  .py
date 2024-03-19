@@ -12,3 +12,4 @@ def searchInsert(nums, target):
         nums.append(target)
         nums = sorted(nums)
         return nums.index(target)
+# 35.搜索插入位置  .py

@@ -24,3 +24,4 @@ class Solution(object):
         :rtype: int
         """
         return haystack.find(needle)
+# 28.实现 strStr().py

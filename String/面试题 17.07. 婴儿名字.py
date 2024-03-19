@@ -44,3 +44,4 @@ a = Solution()
 names  = ["John(15)","Jon(12)","Chris(13)","Kris(4)","Christopher(19)"]
 synonyms = ["(Jon,John)","(John,Johnny)","(Chris,Kris)","(Chris,Christopher)"]
 print(a.trulyMostPopular(names,synonyms))
+# 面试题 17.07. 婴儿名字.py

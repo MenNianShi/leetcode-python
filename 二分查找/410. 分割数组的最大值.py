@@ -47,3 +47,5 @@ class Solution(object):
                 cur_sum = num
                 cnt+=1
         return cnt<=m
+
+# 410. 分割数组的最大值.py

@@ -22,3 +22,5 @@ class Solution(object):
             if k==0:
                 return root.val
             root = root.right
+
+# 230. 二叉搜索树中第K小的元素.py

@@ -18,3 +18,4 @@ class Solution:
         if len(s) < (1 << (k - 1)) + k - 1 or len(s) < n - (1 << k) + k + 1:
             return False
         return help(s, k, 1 << (k - 1), (1 << k) - 1) and help(s, k + 1, 1 << k, n)
+# 1016. 子串能表示从 1 到 N 数字的二进制串.py

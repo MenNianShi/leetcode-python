@@ -45,3 +45,4 @@ class Solution(object):
         return res
 A  = Solution()
 print(A.matrixScore([[0,0,1,1],[1,0,1,0],[1,1,0,0]]))
+# 861. 翻转矩阵后的得分.py

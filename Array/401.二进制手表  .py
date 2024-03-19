@@ -11,3 +11,5 @@ def readBinaryWatch( num):
                 result.append('%d:%02d'% (h,m))
     return result
 print(readBinaryWatch(1))
+
+# 401.二进制手表  .py

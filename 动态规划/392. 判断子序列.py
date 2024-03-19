@@ -52,3 +52,5 @@ class Solution:
 
 
 
+
+# 392. 判断子序列.py

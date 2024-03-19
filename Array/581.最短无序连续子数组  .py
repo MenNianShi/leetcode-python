@@ -26,3 +26,5 @@ class Solution(object):
             return 2
         if len(x)>1:
             return max(x)-min(x)+1
+
+# 581.最短无序连续子数组  .py

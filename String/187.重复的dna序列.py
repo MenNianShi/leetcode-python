@@ -46,3 +46,4 @@ class Solution(object):
                 if cur_s not in res :
                     res.append(cur_s)
         return res
+# 187.重复的dna序列.py

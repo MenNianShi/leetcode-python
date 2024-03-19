@@ -43,3 +43,5 @@ class Solution(object):
 
                 ans = max(ans, cur)
         return ans
+
+# 695. 岛屿的最大面积.py

@@ -27,3 +27,5 @@ class Solution:
 
         # 抹去前导零
         return "".join(finalStack).lstrip('0') or "0"
+
+# 402. 移掉K位数字.py

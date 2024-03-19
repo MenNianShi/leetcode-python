@@ -28,3 +28,5 @@ class Solution(object):
                 min0 = p[0]
 
         return min0 * min1
+
+# 598.范围求和 II  .py

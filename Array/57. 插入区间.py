@@ -21,3 +21,5 @@ class Solution(object):
             else:
                 merged[-1][1] = max(merged[-1][1],interval[1])
         return merged
+
+# 57. 插入区间.py

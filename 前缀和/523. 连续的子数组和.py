@@ -40,3 +40,5 @@ class Solution(object):
             else:
                 hash_dict[reminder] = i
         return False
+
+# 523. 连续的子数组和.py

@@ -40,3 +40,5 @@ class Solution(object):
         else:
             del node;
             return;
+
+# 237. 删除链表中的节点.py

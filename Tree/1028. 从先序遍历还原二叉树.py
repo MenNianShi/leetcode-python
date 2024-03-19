@@ -43,3 +43,5 @@ class Solution:
             path.append(node)
         return path[0]
 
+
+# 1028. 从先序遍历还原二叉树.py

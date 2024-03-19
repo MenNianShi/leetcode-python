@@ -44,3 +44,4 @@ class Solution(object):
             if e.islower() and c.isupper():
                 return True
         return False
+# 520.检测大写字母.py

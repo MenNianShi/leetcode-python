@@ -142,3 +142,5 @@ class LRUCache(object):
             self.k_list.remove(key)
             self.k_list.append(key)
             self.dict_kv[key] = value
+
+# 146.LRU.py

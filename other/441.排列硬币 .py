@@ -44,3 +44,4 @@ class Solution(object):
         """
         order = sqrt(2.0 * floor(n) + 0.25) - 0.5
         return int(order)
+# 441.排列硬币 .py

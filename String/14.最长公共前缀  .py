@@ -85,3 +85,4 @@ class Solution(object):
 
 a = Solution()
 print(a.longestCommonPrefix(['']))
+# 14.最长公共前缀  .py

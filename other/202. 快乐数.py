@@ -52,3 +52,4 @@ class Solution(object):
             n = get_next(n)
 
         return n == 1
+# 202. 快乐数.py

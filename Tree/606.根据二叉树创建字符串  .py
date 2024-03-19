@@ -47,3 +47,4 @@ class Solution(object):
                 node += "(" + self.tree2str(t.right) + ")"
 
         return node
+# 606.根据二叉树创建字符串  .py

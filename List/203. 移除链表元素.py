@@ -62,3 +62,5 @@ class Solution(object):
         return head if head.val != val else head.next
 
         return head
+
+# 203. 移除链表元素.py

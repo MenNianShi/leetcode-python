@@ -28,3 +28,4 @@ class Solution(object):
             if bits[start]==1: start+=2
             else: start+=1
         return start==len(bits)-1
+# 717.1比特与2比特字符  .py

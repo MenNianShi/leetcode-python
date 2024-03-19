@@ -49,3 +49,4 @@ class Solution(object):
         return  dp[-1][-1]
 a = Solution()
 print(a.uniquePathsWithObstacles([[0]]))
+# 63. 不同路径 II.py

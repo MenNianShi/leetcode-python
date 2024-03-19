@@ -50,3 +50,4 @@ class Solution:
             return False
 a = Solution()
 print(a.smallestDivisor([1,2,5,9],6))
+# 1283. 使结果不超过阈值的最小除数.py

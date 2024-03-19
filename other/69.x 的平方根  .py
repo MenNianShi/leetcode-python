@@ -51,3 +51,4 @@ def newton_sqrt(n):
             break
     return result
 print(newton_sqrt(4))
+# 69.x 的平方根  .py

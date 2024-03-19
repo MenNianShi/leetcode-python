@@ -48,3 +48,4 @@ S = "5F3Z-2e-9-w"
 print( S.replace('-','').upper())
 a = Solution()
 print(a.licenseKeyFormatting("5F3Z-2e-9-w",4))
+# 482.密钥格式化.py

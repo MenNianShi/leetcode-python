@@ -14,3 +14,4 @@ class Solution:
                     currow.append(prerow[j]+prerow[j+1])
                 currow.append(1)
         return currow
+# 119.杨辉三角 II .py

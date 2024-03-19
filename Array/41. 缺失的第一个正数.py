@@ -39,3 +39,5 @@ class Solution(object):
         return i
 a = Solution()
 print(a.firstMissingPositive([1,2,0]))
+
+# 41. 缺失的第一个正数.py

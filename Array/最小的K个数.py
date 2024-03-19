@@ -27,3 +27,4 @@ class Solution:
         return i + 1
 a = Solution()
 print(a.GetLeastNumbers_Solution([4,5,2,3,1],3))
+# 最小的K个数.py

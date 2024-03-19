@@ -30,3 +30,4 @@ class Solution(object):
             res += same
             record[x]= same+ 1
         return  res
+# 974. 和可被 K 整除的子数组.py

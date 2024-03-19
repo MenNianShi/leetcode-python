@@ -33,3 +33,5 @@ x = b
 y=b
 a = Solution()
 print(a.isSameTree(x,y))
+
+# 100.相同的树 .py

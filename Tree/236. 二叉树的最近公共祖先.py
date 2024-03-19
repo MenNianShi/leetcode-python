@@ -40,3 +40,5 @@ class Solution:
         if not left : return right
         if not right : return left
         return root
+
+# 236. 二叉树的最近公共祖先.py

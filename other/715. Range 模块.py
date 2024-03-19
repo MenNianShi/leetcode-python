@@ -40,3 +40,5 @@ class RangeModule:
     def removeRange(self, left: int, right: int) -> None:
         self.update(2, left, right - 1, 1, 10 ** 9, 1)
 
+
+# 715. Range 模块.py

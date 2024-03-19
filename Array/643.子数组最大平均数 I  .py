@@ -38,3 +38,4 @@ class Solution(object):
                 curSum = curSum - nums[i - k] + nums[i]
                 sum = max(sum, curSum)
         return sum * 1.0 / k
+# 643.子数组最大平均数 I  .py

@@ -21,3 +21,4 @@ class Solution(object):
                 res.append(text[i])
                 i+=1
         return ''.join(res)
+# 1410. HTML 实体解析器.py

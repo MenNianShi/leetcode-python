@@ -57,3 +57,4 @@ with open('dasd',mode='r') as f :
         s = line.strip('\n').split(' ')[-1]
         count += int(s)
     print(count)
+# 728.自除数 .py

@@ -22,3 +22,4 @@ class Solution(object):
             root.left = self.buildTree(preorder[1:root_index+1] , inorder[:root_index])
             root.right = self.buildTree(preorder[root_index+1:], inorder[root_index+1:])
         return root
+# 105. 从前序与中序遍历序列构造二叉树.py

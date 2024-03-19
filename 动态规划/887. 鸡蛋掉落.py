@@ -94,3 +94,4 @@ class Solution(object):
             return res
 
         return dp(K, N)
+# 887. 鸡蛋掉落.py

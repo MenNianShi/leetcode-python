@@ -35,3 +35,4 @@ class Solution(object):
         #     return 0
         # return len(str.split(' '))
         return len(s.split())
+# 434.字符串中的单词数.py

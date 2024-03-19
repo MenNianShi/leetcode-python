@@ -42,3 +42,4 @@ class Solution(object):
             if m[i]==m[i-1] or m[i]==m[i+1]:
                 return False
         return True
+# 693.交替位二进制数  .py

@@ -20,3 +20,4 @@ def areSentencesSimilar(words1, words2, pairs):
         if w1 != w2 and w2 not in similars[w1]:
             return False
     return True
+# 734.句子相似性.py

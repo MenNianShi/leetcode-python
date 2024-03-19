@@ -53,3 +53,5 @@ class Solution(object):
 a =Solution()
 print(a.containsNearbyDuplicate([1,0,1,1],1))
 
+
+# 219.存在重复元素 II  .py

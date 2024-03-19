@@ -48,3 +48,5 @@ class Solution:
         self.dfs(root.right, result)
 
 
+
+# 872. 叶子相似的树.py

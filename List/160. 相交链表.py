@@ -25,3 +25,5 @@ class Solution:
             pa = headB if pa is None else pa.next
             pb = headA if pb is None else pb.next
         return pa
+
+# 160. 相交链表.py

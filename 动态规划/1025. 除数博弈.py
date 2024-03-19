@@ -45,3 +45,5 @@ class Solution:
                         target[i] = 1
                         break
             return target[N] == 1
+
+# 1025. 除数博弈.py

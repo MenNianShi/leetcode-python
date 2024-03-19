@@ -50,3 +50,4 @@ class Solution(object):
         return A
 a = Solution()
 print(a.flipAndInvertImage([[1,1,0,0],[1,0,0,1],[0,1,1,1],[1,0,1,0]]))
+# 832. 翻转图像.py

@@ -17,3 +17,5 @@ class Solution(object):
                 queue.pop(-1)
             queue.append(i)
         return dp[n - 1]
+
+# 1696. 跳跃游戏 VI.py

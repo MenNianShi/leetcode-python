@@ -15,3 +15,5 @@ class Solution(object):
             i+=2
         return A
 
+
+# 922.按奇偶排序数字.py

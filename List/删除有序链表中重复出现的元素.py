@@ -58,3 +58,4 @@ c = ListNode(1)
 b.next = c
 
 print(a.deleteDuplicates(b))
+# 删除有序链表中重复出现的元素.py

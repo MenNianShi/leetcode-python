@@ -32,3 +32,4 @@ class Solution(object):
         while root.left!=None:
             root = root.left
         return root
+# 450. 删除二叉搜索树中的节点.py

@@ -30,3 +30,4 @@ class Solution(object):
             if value % 2 == 1:
                 odd += 1
         return odd <= 1
+# 1457. 二叉树中的伪回文路径.py

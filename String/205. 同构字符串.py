@@ -47,3 +47,4 @@ class Solution(object):
                     return False
             i+=1
         return True
+# 205. 同构字符串.py

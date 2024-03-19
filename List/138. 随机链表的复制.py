@@ -24,3 +24,5 @@ class Solution(object):
             headNew.random = self.copyRandomList(head.random)
         return self.random_dict[head]
 
+
+# 138. 随机链表的复制.py

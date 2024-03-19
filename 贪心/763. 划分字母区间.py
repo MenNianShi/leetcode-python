@@ -32,3 +32,5 @@ class Solution(object):
                 res.append(end-start+1)
                 start = end+1
         return  res
+
+# 763. 划分字母区间.py

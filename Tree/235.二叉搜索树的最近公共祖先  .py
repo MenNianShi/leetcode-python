@@ -26,3 +26,4 @@ class Solution:
             return self.lowestCommonAncestor(root.left, p, q)
         else:
             return self.lowestCommonAncestor(root.right, p, q)
+# 235.二叉搜索树的最近公共祖先  .py

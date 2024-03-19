@@ -25,3 +25,4 @@ class Solution(object):
         return False
 a = Solution()
 print(a.judgeSquareSum(5))
+# 633.平方数之和  .py

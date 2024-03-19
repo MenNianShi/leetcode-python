@@ -14,3 +14,4 @@ def canWinNim(n):
         :rtype: bool
         """
         return bool(n % 4)
+# 292.Nim 游戏  .py

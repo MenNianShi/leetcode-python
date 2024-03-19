@@ -87,3 +87,5 @@ class Solution(object):
 a = Solution()
 a.ambiguousCoordinates("(100)")
 
+
+# 816. 模糊坐标.py

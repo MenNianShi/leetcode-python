@@ -29,3 +29,4 @@ class Solution(object):
             pre  =p
             p=nxt
         return pre
+# 206. 反转链表.py

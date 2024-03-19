@@ -17,3 +17,4 @@ class Solution(object):
         return  res[n-1]
 a = Solution()
 print(a.nthUglyNumber(1000000000,2,217983653,336916467))
+# 1201. 丑数 III.py

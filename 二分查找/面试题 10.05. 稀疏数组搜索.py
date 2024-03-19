@@ -20,3 +20,5 @@ class Solution:
                 left = mid + 1
         return -1
 
+
+# 面试题 10.05. 稀疏数组搜索.py

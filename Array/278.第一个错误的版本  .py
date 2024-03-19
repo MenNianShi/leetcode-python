@@ -46,3 +46,5 @@ class Solution(object):
 
         return left
 
+
+# 278.第一个错误的版本  .py

@@ -70,3 +70,4 @@ class Solution(object):
             res[pos[j][0]] = pos[len(pos) - j - 1][1]
             res[pos[len(pos) - j - 1][0]] = pos[j][1]
         return ''.join(res)
+# 345.反转字符串中的元音字母.py

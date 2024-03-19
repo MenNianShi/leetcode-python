@@ -31,3 +31,4 @@ class Solution(object):
         while num % 5 == 0:
             num = num /5
         return num ==1
+# 263.丑数 .py

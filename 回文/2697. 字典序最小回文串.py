@@ -12,3 +12,4 @@ class Solution(object):
             left+=1
             right-=1
         return ''.join(s)
+# 2697. 字典序最小回文串.py

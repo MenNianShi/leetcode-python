@@ -20,3 +20,4 @@ class Solution(object):
             return self.searchBST(root.left,val)
         if root.val < val:
             return self.searchBST(root.right,val)
+# 700. 二叉搜索树中的搜索.py

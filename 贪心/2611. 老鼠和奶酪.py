@@ -9,13 +9,4 @@ class Solution:
         for i in range(1, k+1):
             ans += diffs[n - i]
         return ans
-
-
-
-
-
-
-
-
-
-
+# 2611. 老鼠和奶酪.py

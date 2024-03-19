@@ -37,3 +37,4 @@ def twoSum(numbers,target):
         if (target-num) in num_dict:
             return [num_dict[target-num],i+1]
         num_dict[num] = i+1
+# 167.两数之和输入有序数组.py

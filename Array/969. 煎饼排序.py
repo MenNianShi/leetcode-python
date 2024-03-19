@@ -32,3 +32,4 @@ class Solution(object):
 
 a = Solution()
 print(a.pancakeSort([1,2,3]))
+# 969. 煎饼排序.py

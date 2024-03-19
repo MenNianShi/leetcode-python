@@ -40,3 +40,4 @@ class Solution(object):
         ans=[]
         DFS([],[],[])
         return len(ans)
+# 52. N皇后 II.py

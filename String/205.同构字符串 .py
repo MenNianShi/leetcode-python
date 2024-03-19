@@ -31,3 +31,4 @@ class Solution(object):
         return len(mapval) == len(set(mapval))
 a = Solution()
 print(a.isIsomorphic('aa','ab'))
+# 205.同构字符串 .py

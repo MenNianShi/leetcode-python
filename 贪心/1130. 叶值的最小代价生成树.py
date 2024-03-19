@@ -26,3 +26,5 @@ class Solution(object):
             ans += mn
             del arr[del_i]
         return ans
+
+# 1130. 叶值的最小代价生成树.py

@@ -63,3 +63,4 @@ class Solution(object):
                 return False
             else:
                 return self.isSubtree(s.right, t) or self.isSubtree(s.left, t)
+# 572.另一个树的子树  .py

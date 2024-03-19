@@ -36,3 +36,4 @@ class Solution(object):
             cur = leftdepth + rightdepth + 1
             self.res = max(self.res, cur - 1) # 直径 = 深度 - 1
             return max(leftdepth , rightdepth) + 1 # 深度 = 子树深度 + 1
+# 543.二叉树的直径  .py

@@ -44,3 +44,5 @@ class Solution:
             if ''.join(set(typed[j:]))==typed[j]:
                 return True
             return False
+
+# 925. 长按键入.py

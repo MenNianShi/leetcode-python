@@ -59,3 +59,4 @@ class Solution(object):
 
         getLongest(root, None)
         return max(longpaths) if longpaths else 0
+# 687.最长同值路径  .py

@@ -20,3 +20,4 @@ class Solution(object):
         return max(dp)
 a = Solution()
 print(a.lengthOfLIS([1,3,6,7,9,4,10,5,6]))
+# 300.最长上升子序列.py

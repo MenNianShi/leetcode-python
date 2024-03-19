@@ -31,3 +31,4 @@ def checkRecord(s):
     return True
 
 print(checkRecord('ALL'))
+# 551.学生出勤记录 I.py

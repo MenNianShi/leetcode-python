@@ -14,3 +14,4 @@ class Solution:
           j = bisect_right(rides,rides[i][0], hi=i, key=lambda r:r[1])
           dp[i+1] = max(dp[i], dp[j] + rides[i][1]-rides[i][0] + rides[i][2])
         return dp[m]
+# 2008. 出租车的最大盈利.py

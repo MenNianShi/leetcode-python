@@ -25,3 +25,4 @@ class Solution(object):
         for i in range(1, n):
             pre, cur = cur, pre+cur
         return cur
+# 70.爬楼梯  .py

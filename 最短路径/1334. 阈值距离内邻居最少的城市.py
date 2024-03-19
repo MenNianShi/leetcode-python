@@ -63,3 +63,4 @@ class Solution(object):
             if cnt <= ans[0]:
                 ans = [cnt, i]
         return ans[1]
+# 1334. 阈值距离内邻居最少的城市.py

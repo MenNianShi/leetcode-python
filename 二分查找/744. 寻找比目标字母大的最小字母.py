@@ -24,3 +24,4 @@ class Solution(object):
         return left
 a  = Solution()
 print(a.nextGreatestLetter(["c","f","j"],'a'))
+# 744. 寻找比目标字母大的最小字母.py

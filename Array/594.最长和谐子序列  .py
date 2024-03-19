@@ -60,3 +60,4 @@ class Solution(object):
                 dict[i] += 1
 
         return max([dict[i] + dict[i + 1] for i in dict if i + 1 in dict] or [0])
+# 594.最长和谐子序列  .py

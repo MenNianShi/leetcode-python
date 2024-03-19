@@ -32,3 +32,5 @@ class Solution:
                 j = j + k + 1
         return s[i:]
 
+
+# 1163. 按字典序排在最后的子串.py

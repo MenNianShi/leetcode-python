@@ -21,3 +21,5 @@ class Solution:
                 ans.append(n)
                 c1[n] -= 1
         return ans
+
+# 350. 两个数组的交集 II.py

@@ -47,3 +47,4 @@ myList = [49,38,65,97,76,13,27,49]
 print("Quick Sort: ")
 qsort(myList,0,len(myList)-1)
 print(myList)
+# 快速排序.py

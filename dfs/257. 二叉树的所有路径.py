@@ -21,3 +21,4 @@ class Solution(object):
                     dfs(root.right,cur+str(root.val)+"->")
         dfs(root,"")
         return res
+# 257. 二叉树的所有路径.py

@@ -23,3 +23,5 @@ class Solution(object):
             return False
         return self.dfs(root.left, minTree, root) and self.dfs(root.right, root,maxTree)
 
+
+# 98. 验证二叉搜索树.py

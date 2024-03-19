@@ -52,3 +52,4 @@ class Solution(object):
                 self.dfs(node.left, path, paths)
             if node.right:
                 self.dfs(node.right, path, paths)
+# 257.二叉树的所有路径 .py

@@ -29,3 +29,5 @@ class Solution:
                 if self.check(s, pre, j, i + j):
                     return i + 1
         return 0
+
+# 1371. 每个元音包含偶数次的最长子字符串.py

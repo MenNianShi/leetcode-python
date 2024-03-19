@@ -46,3 +46,5 @@ class Solution:
             for j in range(n):
                 matrix[0][j] = 0
 
+
+# 73. 矩阵置零.py

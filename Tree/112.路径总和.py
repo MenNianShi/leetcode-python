@@ -17,3 +17,4 @@ class Solution:
             return root.val == sum
 
         return self.hasPathSum(root.left, sum - root.val) or self.hasPathSum(root.right, sum - root.val)
+# 112.路径总和.py

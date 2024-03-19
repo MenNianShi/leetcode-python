@@ -24,3 +24,5 @@ class Solution(object):
                 r = mid
         return aveNums[l]
 
+
+# 2048. 下一个更大的数值平衡数.py

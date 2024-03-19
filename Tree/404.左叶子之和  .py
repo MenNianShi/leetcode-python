@@ -31,3 +31,4 @@ class Solution(object):
                 dfs(False,root.right)
         dfs(False,root)
         return self.cur
+# 404.左叶子之和  .py

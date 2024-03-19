@@ -10,3 +10,4 @@ class Solution(object):
             for c, val in enumerate(row):
                 ans[c][r] = val
         return ans
+# 867. 转置矩阵.py

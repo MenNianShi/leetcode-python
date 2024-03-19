@@ -15,3 +15,5 @@ class Solution:
             ans.append(not (x1 > y2 or y1 < x2))
 
         return ans
+
+# 1744. 你能在你最喜欢的那天吃到你最喜欢的糖果吗？.py

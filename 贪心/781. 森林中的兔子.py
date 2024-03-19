@@ -38,3 +38,5 @@ class Solution:
         for num in count:
             res += math.ceil(count[num]/(num+1)) * (num+1)
         return res
+
+# 781. 森林中的兔子.py

@@ -39,3 +39,5 @@ class Solution(object):
                 i += 1
         return res
 
+
+# 986. 区间列表的交集.py

@@ -31,3 +31,5 @@ class Solution(object):
             return False
         x = math.log(n, 2)
         return 2 ** round(x, 0) == n
+
+# 326.3的幂 .py

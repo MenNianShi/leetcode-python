@@ -70,3 +70,5 @@ class Solution(object):
         backtrack(nums, target, 0, 0)
         return self.count
 
+
+# 494. 目标和.py

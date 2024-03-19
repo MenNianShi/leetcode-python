@@ -37,3 +37,5 @@ class Solution:
                 dp[i][j]=(dp[i][j-1] and s2[j-1]==s3[i+j-1]) or (dp[i-1][j] and s1[i-1]==s3[i+j-1])
         return dp[-1][-1]
 
+
+# 97. 交错字符串.py

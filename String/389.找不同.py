@@ -40,3 +40,4 @@ def findTheDifference(self, s, t):
     for i in dictionary.keys():
         if dictionary[i]!=0:
             return i
+# 389.找不同.py

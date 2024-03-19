@@ -40,3 +40,5 @@ class Solution(object):
             convert(root.left)
         convert(root)
         return root
+
+# 538.把二叉搜索树转换为累加树  .py

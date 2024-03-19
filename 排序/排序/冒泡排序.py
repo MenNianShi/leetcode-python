@@ -6,3 +6,5 @@ def bubble_sort(lists):
             if lists[i] > lists[j]:
                 lists[i], lists[j] = lists[j], lists[i]
     return lists
+
+# 冒泡排序.py

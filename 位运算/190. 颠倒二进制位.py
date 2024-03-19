@@ -16,3 +16,5 @@ class Solution:
 
         return int(bin(res), 2)
 
+
+# 190. 颠倒二进制位.py

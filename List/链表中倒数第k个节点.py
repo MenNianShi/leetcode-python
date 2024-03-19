@@ -14,3 +14,4 @@ class Solution:
             fast = fast.next
             slow = slow.next
         return slow
+# 链表中倒数第k个节点.py

@@ -38,3 +38,4 @@ class Solution:
             return True
 
         return [judgeBST(root,float('-inf'),float('inf')),judgeBCT(root)]
+# 判断二叉树是否为搜索二叉树和完全二叉树.py

@@ -24,3 +24,4 @@ class Solution(object):
                 continue
             res += edge[1] + self.dfs(edge[0],x,e)
         return res
+# 1466. 重新规划路线.py

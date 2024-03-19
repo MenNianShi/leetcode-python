@@ -30,3 +30,4 @@ a = [1,2]
 b = [3,4]
 c = Solution()
 print(c.findMedianSortedArrays(a,b))
+# 4. 寻找两个有序数组的中位数.py

@@ -76,3 +76,4 @@ class Solution(object):
         return max_res
 a = Solution()
 print(a.findTheLongestBalancedSubstring("01"))
+# 318. 最大单词长度乘积.py

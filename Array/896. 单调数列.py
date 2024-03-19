@@ -21,3 +21,4 @@ class Solution(object):
             if A[i]< A[i-1]:
                 asc = False
         return asc or desc
+# 896. 单调数列.py

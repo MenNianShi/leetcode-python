@@ -22,3 +22,4 @@ class Solution:
         return ans
 a = Solution()
 print(a.reconstructQueue([[7,0], [4,4], [7,1], [5,0], [6,1], [5,2]]))
+# 406. 根据身高重建队列.py

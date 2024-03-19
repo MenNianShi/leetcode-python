@@ -29,3 +29,4 @@ class Solution(object):
                         all_trees.append(temp)
             return all_trees
         return buildtrees(1,n)
+# 95. 不同的二叉搜索树 II.py

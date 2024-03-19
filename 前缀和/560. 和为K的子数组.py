@@ -51,3 +51,4 @@ class Solution(object):
         return res
 a=  Solution()
 print(a.subarraySum([1,1,1],2))
+# 560. 和为K的子数组.py

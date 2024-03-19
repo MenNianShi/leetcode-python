@@ -10,3 +10,4 @@ def missingNumber(nums):
         if i not in a:
             return i
 print(missingNumber([0]))
+# 268.丢失的数字  .py

@@ -19,3 +19,5 @@ def bucketSort(nums):
 
 nums = [5,6,3,2,1,65,2,0,8,0]
 print(bucketSort(nums))
+
+# 桶排序.py

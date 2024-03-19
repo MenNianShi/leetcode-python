@@ -24,3 +24,5 @@ class Solution(object):
         return res
 a = Solution()
 print(a.convertToTitle(27))
+
+# 168. Excel表列名称  .py

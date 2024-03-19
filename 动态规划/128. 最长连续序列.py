@@ -27,3 +27,5 @@ class Solution(object):
                 num_dict[num-l] = 1+r + l
                 res = max(res,num_dict[num])
         return res
+
+# 128. 最长连续序列.py

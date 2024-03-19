@@ -30,3 +30,4 @@ class Solution(object):
                 row.append(sum(nbs) / len(nbs))
             N.append(row)
         return N
+# 661.图片平滑器 .py

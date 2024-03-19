@@ -53,3 +53,5 @@ class Solution(object):
 
 a = Solution()
 print(a.backspaceCompare("ab##", "a#c#"))
+
+# 844. 比较含退格的字符串.py

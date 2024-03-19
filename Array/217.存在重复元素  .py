@@ -13,3 +13,5 @@ def containsDuplicate(nums):
         return True
 
 print(containsDuplicate([1,2,2,3]))
+
+# 217.存在重复元素  .py

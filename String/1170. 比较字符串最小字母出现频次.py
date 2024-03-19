@@ -46,3 +46,5 @@ class Solution(object):
                     r=mid-1
             ans.append(len(w)-l)
         return ans
+
+# 1170. 比较字符串最小字母出现频次.py

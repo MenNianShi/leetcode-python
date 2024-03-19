@@ -45,3 +45,4 @@ class NumArray:
 # Your NumArray object will be instantiated and called as such:
 # obj = NumArray(nums)
 # param_1 = obj.sumRange(i,j)
+# 303.区域和检索 - 数组不可变  .py

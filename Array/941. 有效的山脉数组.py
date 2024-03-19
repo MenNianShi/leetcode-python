@@ -64,3 +64,4 @@ class Solution(object):
         return True
 A = Solution()
 print(A.validMountainArray([0,3,2,1]))
+# 941. 有效的山脉数组.py

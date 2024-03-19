@@ -47,3 +47,4 @@ class Solution(object):
                 if chessboard[i][j] == '.':
                     res = max(res,bfs(chessboard,i,j))
         return res
+# LCP 41. 黑白翻转棋.py

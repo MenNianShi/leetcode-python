@@ -33,3 +33,4 @@ class Solution(object):
                 curC += 1
 
         return result
+# 696.计数二进制子串  .py

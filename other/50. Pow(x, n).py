@@ -31,3 +31,4 @@ class Solution:
 
 a = Solution()
 print(a.myPow(2,10))
+# 50. Pow(x, n).py

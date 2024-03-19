@@ -70,3 +70,5 @@ print(a.findShortestSubArray([1,2,2,3,1,4,2]))
 
 
 
+
+# 697.数组的度  .py

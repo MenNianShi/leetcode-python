@@ -39,3 +39,5 @@ class Solution:
                 # [mid + 1, right]
                 left = mid + 1
         return left
+
+# 287. 寻找重复数.py

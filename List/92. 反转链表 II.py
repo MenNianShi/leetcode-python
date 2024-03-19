@@ -54,3 +54,5 @@ class Solution(object):
         head.next.next = head
         head.next = self.successor
         return last
+
+# 92. 反转链表 II.py

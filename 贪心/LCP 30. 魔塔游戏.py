@@ -23,4 +23,4 @@ class Solution:
         if cur_sum < minSum:  # 如果正值，不能够把扔到末尾的负值抵消掉
             return -1
         return time
-
+# LCP 30. 魔塔游戏.py

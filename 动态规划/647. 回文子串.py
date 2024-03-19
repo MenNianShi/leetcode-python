@@ -64,3 +64,4 @@ class Solution(object):
         return cnt
 a = Solution()
 print(a.countSubstrings('aaa'))
+# 647. 回文子串.py

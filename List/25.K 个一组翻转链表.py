@@ -80,3 +80,5 @@ class Solution:
             # start.next, start.next.next, dummy.next = start.next.next, dummy.next, start.next
             # The above line is wrong! But WHY?
         return (end, start)
+
+# 25.K 个一组翻转链表.py

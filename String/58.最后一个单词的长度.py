@@ -39,3 +39,5 @@ class Solution(object):
         return len(s)
 a = Solution()
 print(a.lengthOfLastWord("a     "))
+
+# 58.最后一个单词的长度.py

@@ -39,3 +39,4 @@ class Solution(object):
                 return False
 
         return True
+# 383.赎金信.py

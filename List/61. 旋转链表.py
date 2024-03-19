@@ -34,3 +34,4 @@ class Solution(object):
         ret = cur.next
         cur.next = None
         return ret
+# 61. 旋转链表.py

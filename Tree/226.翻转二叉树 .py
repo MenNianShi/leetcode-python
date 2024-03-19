@@ -21,3 +21,4 @@ class Solution(object):
         self.invertTree(root.right)
 
         return root
+# 226.翻转二叉树 .py

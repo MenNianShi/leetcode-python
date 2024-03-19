@@ -32,3 +32,4 @@ def findMaxConsecutiveOnes( nums):
 
     return maxlength
 print(findMaxConsecutiveOnes([1,0,1,1,0,1]))
+# 485.最大连续 1 的个数  .py

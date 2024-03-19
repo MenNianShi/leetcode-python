@@ -16,3 +16,4 @@ class Solution(object):
         return l
 a = Solution()
 print(a.findWords(["Hello","Alaska","Dad","Peace"]))
+# 500.键盘行.py

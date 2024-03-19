@@ -23,3 +23,4 @@ class Solution(object):
             for j in range(i):
                 dp[i] = max(dp[i],max(j*dp[i-j],j*(i-j)))
         return dp[n]
+# 343. 整数拆分.py

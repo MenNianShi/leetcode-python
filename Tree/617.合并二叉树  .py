@@ -15,3 +15,4 @@ class Solution(object):
             return root
         else:
             return t1 or t2
+# 617.合并二叉树  .py

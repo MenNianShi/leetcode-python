@@ -32,3 +32,5 @@ class Solution(object):
                 cnt +=1 
                 prev = p
         return cnt >= k 
+
+# 2517. 礼盒的最大甜蜜度.py

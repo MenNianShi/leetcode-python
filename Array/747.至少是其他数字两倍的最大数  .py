@@ -20,3 +20,4 @@ class Solution(object):
         for i in xrange(2,length):
             dp.append(min(dp[i-2],dp[i-1])+cost[i])
         return min(dp[-1],dp[-2])
+# 747.至少是其他数字两倍的最大数  .py

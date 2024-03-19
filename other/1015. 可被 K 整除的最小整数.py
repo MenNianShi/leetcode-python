@@ -39,3 +39,4 @@ class Solution(object):
                 return -1
             resid_set.add(resid)
         return resid_len
+# 1015. 可被 K 整除的最小整数.py

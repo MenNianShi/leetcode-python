@@ -35,3 +35,5 @@ class Solution(object):
         if (dfs(root) != None):
             res.append(root)
         return res
+
+# 1110. 删点成林.py

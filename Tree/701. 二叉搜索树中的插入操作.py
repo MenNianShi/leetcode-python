@@ -18,3 +18,4 @@ class Solution(object):
         if root.val< val:
             root.right =  self.insertIntoBST(root.right,val)
         return root
+# 701. 二叉搜索树中的插入操作.py

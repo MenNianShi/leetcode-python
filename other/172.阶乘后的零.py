@@ -12,3 +12,4 @@ class Solution(object):
             n = n/5
             res += n
         return res
+# 172.阶乘后的零.py

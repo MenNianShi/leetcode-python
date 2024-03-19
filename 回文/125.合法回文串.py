@@ -22,3 +22,4 @@ class Solution(object):
             start += 1
             end -= 1
         return True
+# 125.合法回文串.py

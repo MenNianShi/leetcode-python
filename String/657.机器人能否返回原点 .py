@@ -30,3 +30,4 @@ class Solution(object):
         :rtype: bool
         """
         return moves.count('L') - moves.count('R') == 0 and moves.count('U') - moves.count('D') == 0
+# 657.机器人能否返回原点 .py

@@ -45,3 +45,5 @@ class Solution:
                 q.append((node.left, val + 1))
             if node.right:
                 q.append((node.right, val + 1))
+
+# 111.二叉树的最小深度 .py

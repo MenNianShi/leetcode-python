@@ -71,3 +71,4 @@ a.left = b
 a.right = c
 exa = Solution()
 print(exa.findSecondMinimumValue(a))
+# 671.二叉树中第二小的节点  .py

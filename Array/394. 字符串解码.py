@@ -63,3 +63,5 @@ class Solution:
             return res
         return dfs(s,0)
 
+
+# 394. 字符串解码.py

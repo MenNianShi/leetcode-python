@@ -9,3 +9,4 @@ def select_sort(lists):
                 min = j
         lists[min], lists[i] = lists[i], lists[min]
     return lists
+# 直接选择排序.py

@@ -90,3 +90,4 @@ class Solution(object):
             else:
                 left = mid+1
         return -1
+# 34. 在排序数组中查找元素的第一个和最后一个位置.py

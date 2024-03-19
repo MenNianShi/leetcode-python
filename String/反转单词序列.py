@@ -24,3 +24,4 @@ class Solution:
             left += 1
             right -= 1
         return strs
+# 反转单词序列.py

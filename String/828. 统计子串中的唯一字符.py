@@ -15,3 +15,4 @@ class Solution:
             for i in range(1, len(arr)-1):
                 res += (arr[i]- arr[i-1]) * (arr[i+1]- arr[i])
         return res
+# 828. 统计子串中的唯一字符.py

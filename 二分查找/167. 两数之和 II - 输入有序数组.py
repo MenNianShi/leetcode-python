@@ -54,3 +54,4 @@ class Solution(object):
                 left+=1
 a =Solution()
 print(a.twoSum([-3,3,4,90],0))
+# 167. 两数之和 II - 输入有序数组.py

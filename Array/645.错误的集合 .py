@@ -9,3 +9,4 @@ class Solution(object):
         twice = sum(nums) - sum(set(nums))
         miss = twice + n*(n+1)/2 - sum(nums)
         return [twice, miss]
+# 645.错误的集合 .py

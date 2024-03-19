@@ -19,3 +19,4 @@ class Solution(object):
         while k>len(nums):
             k=k%len(nums)
         nums[:]=nums[len(nums)-k:]+nums[:len(nums)-k]
+# 189.旋转数组 .py

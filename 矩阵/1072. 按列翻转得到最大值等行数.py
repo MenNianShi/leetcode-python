@@ -40,3 +40,4 @@ class Solution(object):
 
 a = Solution()
 print(a.maxEqualRowsAfterFlips([[0,1],[1,0]]))
+# 1072. 按列翻转得到最大值等行数.py

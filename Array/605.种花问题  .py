@@ -48,3 +48,4 @@ class Solution(object):
         return placed >= n
 a = Solution()
 print(a.canPlaceFlowers([1,0,0,0,1],1))
+# 605.种花问题  .py

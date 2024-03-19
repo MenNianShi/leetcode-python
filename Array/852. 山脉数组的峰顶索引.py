@@ -48,3 +48,5 @@ class Solution(object):
                 pre_index = i
             else:
                 return pre_index
+
+# 852. 山脉数组的峰顶索引.py

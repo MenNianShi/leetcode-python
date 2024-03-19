@@ -15,3 +15,4 @@ class Solution(object):
             res[i] =  0 if len(stack)==0 else stack[-1]-i
             stack.append(i)
         return res
+# 739. 每日温度.py

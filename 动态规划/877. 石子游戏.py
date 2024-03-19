@@ -55,3 +55,4 @@ class Solution(object):
         return (dp[0][n - 1][0] - dp[0][n - 1][1]) > 0
 a = Solution()
 print(a.stoneGame([5,3,4,5]))
+# 877. 石子游戏.py

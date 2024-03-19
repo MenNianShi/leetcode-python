@@ -26,3 +26,5 @@ class Solution(object):
 
 a = Solution()
 print(a.merge([0],0,[1],1))
+
+# 88.合并两个有序数组  .py

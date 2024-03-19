@@ -34,3 +34,4 @@ class Solution(object):
         return res
 a = Solution()
 print(a.permute([1,2,3]))
+# 46. 全排列.py

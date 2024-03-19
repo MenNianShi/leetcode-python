@@ -30,3 +30,4 @@ class Solution:
             return cond
         else:
             return 0
+# 数组中出现次数超过一半的数.py

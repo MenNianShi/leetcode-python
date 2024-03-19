@@ -23,3 +23,5 @@ class Solution(object):
 
         dfs(0, -1)
         return self.res
+
+# 2477. 到达首都的最少油耗.py

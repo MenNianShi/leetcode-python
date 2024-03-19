@@ -36,3 +36,4 @@ class Solution(object):
             return 0
 
         return max(self.maxDepth(root.left), self.maxDepth(root.right)) + 1
+# 104.二叉树的最大深度 .py

@@ -63,3 +63,5 @@ class Solution(object):
                     flag = 0
             res += flag
         return  res
+
+# 1684. 统计一致字符串的数目.py
