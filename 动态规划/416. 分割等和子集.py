@@ -22,56 +22,37 @@
 # 解释: 数组不能分割成两个元素和相等的子集.
 class Solution(object):
     def canPartition(self, nums):
-        if not nums: return True
-        total = sum(nums)
-        if total & 1:  # 和为奇数
-            return False
-        total = total >> 1  # 除2
-        nums.sort(reverse=True)  # 逆排序
-        if total < nums[0]:  # 当数组最大值超过总和的一半
-            return False
-        return self.dfs(nums, total)
-
-    def dfs(self, nums, total):
-        if total == 0:
-            return True
-        if total < 0:
-            return False
-        for i in range(len(nums)):
-            if self.dfs(nums[i+1:], total - nums[i]):  # 除去i及其之前，保证每个数只用一次
-                return True
-        return False
-
-
-class Solution:
-    def canPartition(self, nums: List[int]) -> bool:
+        """
+        :type nums: List[int]
+        :rtype: bool
+        """
         n = len(nums)
         if n < 2:
             return False
-
         total = sum(nums)
-        maxNum = max(nums)
-        if total & 1:
+        max_num = max(nums)
+        if total % 2 == 1:
             return False
-
-        target = total // 2
-        if maxNum > target:
+        half_sum = total // 2
+        if max_num > half_sum:
             return False
+        # dp[i][j] 表示从数组的 [0,i] 下标范围内选取若干个正整数（可以是 0 个），
+        # 是否存在一种选取方案使得被选取的正整数的和等于 j。
+        # 初始时，dp中的全部元素都是 false
 
-        dp = [[0] * (target + 1) for _ in range(n)]
+        dp = [[False] * (half_sum + 1) for _ in range(n)]
         for i in range(n):
             dp[i][0] = True
-
         dp[0][nums[0]] = True
         for i in range(1, n):
             num = nums[i]
-            for j in range(1, target + 1):
-                if j >= num:
-                    dp[i][j] = dp[i - 1][j] | dp[i - 1][j - num]
+            for j in range(1, half_sum + 1):
+                if j > num:
+                    dp[i][j] = dp[i - 1][j] or dp[i - 1][j - num]
                 else:
                     dp[i][j] = dp[i - 1][j]
+        return dp[n - 1][half_sum]
 
-        return dp[n - 1][target]
 class Solution(object):
     def canPartition(self, nums):
         """

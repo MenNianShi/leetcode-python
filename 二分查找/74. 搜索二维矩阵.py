@@ -11,40 +11,19 @@ class Solution(object):
         :type target: int
         :rtype: bool
         """
-        m =len(matrix)
-        if m <1  :
-            return False
+        m = len(matrix)
         n = len(matrix[0])
-        if  n < 1:
+        if m <1:
             return False
-        x = m-1
+        x = m - 1
         y = 0
-        while x< m and y < n and x>-1 and y >-1 :
-            if target == matrix[x][y] :
+        while x>-1 and y < n :
+            if matrix[x][y] == target:
                 return True
-            elif target>matrix[x][y] :
-                y = y+1
+            elif matrix[x][y] > target:
+                x -= 1
             else:
-                x = x-1
+                y += 1
         return False
-class Solution(object):
-    def searchMatrix(self, matrix, target):
-        """
-        :type matrix: List[List[int]]
-        :type target: int
-        :rtype: bool
-        """
-        left = 0
-        right = len(matrix) * len(matrix[0]) - 1
-        # binary search
-        while left <= right:
-            mid = (left + right) // 2
-            # locate element in the matrix
-            midVal = matrix[mid // len(matrix[0])][mid % len(matrix[0])]
-            if midVal == target: return True
-            elif midVal > target: right = mid - 1
-            else : left = mid + 1
-        return False
-
 
 # 74. 搜索二维矩阵.py

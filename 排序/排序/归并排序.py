@@ -5,7 +5,7 @@
 # 然后被放入空数组的那个位置的指针往后 移一个，
 # 然后继续和另外一个数组的上一个位置进行比较，
 # 以此类推。到最后任何一个数组先出栈完，就将另外i一个数组里的所有元素追加到新数组后面。
-def merge(left, right):#类比两有序链表合并
+def merge(left, right):#类比两有序List合并
     i, j = 0, 0
     result = []
     while i < len(left) and j < len(right):

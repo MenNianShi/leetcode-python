@@ -1,5 +1,3 @@
-x = []
-x.
 class Solution(object):#递归
     def myPow(self, x, n):
         """

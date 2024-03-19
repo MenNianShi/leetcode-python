@@ -35,3 +35,16 @@ class Solution(object):
             dp[i][1] = max(dp[i - 1][1], -prices[i])
         return dp[n - 1][0]
 # 121. 买卖股票的最佳时机.py
+
+class Solution(object):
+    def maxProfit(self, prices):
+        """
+        :type prices: List[int]
+        :rtype: int
+        """
+        min_price = float('inf')
+        res = 0
+        for price in prices:
+            res = max(res,price - min_price)
+            min_price = min(min_price, price)
+        return res

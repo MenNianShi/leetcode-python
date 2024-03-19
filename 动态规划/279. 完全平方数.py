@@ -23,17 +23,16 @@ class Solution(object):
         :type n: int
         :rtype: int
         """
-        #dp[n] 表示 和为n 时最少 平方数个数
-        dp = [0]*(n+1)
+        dp = [0] * (n+1)
         for i in range(1,n+1):
             min_num = float('inf')
-            temp = int(math.sqrt(i))
             j = 1
-            while j*j<=i :
-                min_num = min(min_num,dp[i-j*j])
-                j+=1
-            dp[i] = min_num+1
+            while j * j <=i :
+                min_num = min(min_num, dp[i- j*j])
+                j +=1
+            dp[i] = min_num + 1
         return dp[n]
+
 
 
 

@@ -4,9 +4,9 @@ class ListNode(object):
         self.val = val
         self.next = next
 
-# 给你一个链表的头节点head，请你编写代码，反复删去链表中由总和值为0的连续节点组成的序列，直到不存在这样的序列为止。
+# 给你一个List的头节点head，请你编写代码，反复删去List中由总和值为0的连续节点组成的序列，直到不存在这样的序列为止。
 #
-# 删除完毕后，请你返回最终结果链表的头节点。
+# 删除完毕后，请你返回最终结果List的头节点。
 #
 # 你可以返回任何满足题目要求的答案。
 #
@@ -50,4 +50,4 @@ class Solution(object):
             head.next = seen[prefix].next
             head = head.next
         return dummy.next
-# 1171. 从链表中删去总和值为零的连续节点.py
+# 1171. 从List中删去总和值为零的连续节点.py

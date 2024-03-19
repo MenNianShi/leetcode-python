@@ -70,24 +70,21 @@ class Solution(object):
             else:
                 right = mid - 1
 
-class Solution1(object):
+class Solution(object):
     def findMin(self, nums):
         """
         :type nums: List[int]
         :rtype: int
         """
-        left =0
+        left = 0
         right = len(nums)-1
-        result = float('inf')
-        while left <= right:
+        while left < right:
             mid = left + (right-left)//2
-            result = min(nums[mid],result)
-            if nums[mid]>=nums[left]:
-                if nums[left] <= nums[mid]<= nums[right]:
-                    right = mid -1
-                else:
-                    left = mid+1
+            if nums[mid] < nums[right]:
+                right = mid
+            elif nums[mid] > nums[right]:
+                left = mid+1
             else:
-                right = mid -1
-        return result
+                right -=1
+        return nums[left]
 # 153. 寻找旋转排序数组中的最小值.py

@@ -16,21 +16,23 @@
 
 
 class Solution(object):
-    def partitionLabels(self, S):
+    def partitionLabels(self, s):
         """
-        :type S: str
+        :type s: str
         :rtype: List[int]
         """
-        last = [0] * 26
-        for i,ch in enumerate(S):
-            last[ord(ch)-ord('a')]=i
+        start , end = 0,0
+        last_index_dict = collections.defaultdict(int)
+        for index,ch in enumerate(s):
+            last_index_dict[ch] = index
         res = []
-        start = end = 0
-        for i , ch in enumerate(S):
-            end = max(end,last[ord(ch)-ord('a')])
-            if i==end:
-                res.append(end-start+1)
-                start = end+1
-        return  res
+        for i in range(len(s)):
+            ch = s[i]
+            end = max(end,last_index_dict[ch])
+            if i == end :
+                res.append(end - start + 1)
+                start = end + 1
+                end = start
+        return res 
 
 # 763. 划分字母区间.py
