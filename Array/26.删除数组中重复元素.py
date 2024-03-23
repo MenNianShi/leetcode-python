@@ -6,6 +6,7 @@ def removeDuplicates( nums):
     nums = set(nums)
     print(nums)
     return len(nums)
+
 def removeDuplicates( nums):
     if len(nums)==0:
         return 0

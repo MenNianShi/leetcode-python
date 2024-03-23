@@ -26,6 +26,30 @@
 # 开往 3 号加油站，你需要消耗 5 升汽油，正好足够你返回到 3 号加油站。
 # 因此，3 可为起始索引。
 #双指针，理解难点：节点回退
+class Solution(object):
+    def canCompleteCircuit(self, gas, cost):
+        """
+        :type gas: List[int]
+        :type cost: List[int]
+        :rtype: int
+        """
+        # 只要总油量大于等于总耗油量就肯定能跑完一圈，换句话说，
+        # 油的剩余量如果大于等于0就肯定能跑完一圈，
+        # 那么总耗油量如果小于0，直接返回-1
+        total_remain_gas = 0
+        cur_gas = 0
+        index = 0
+        for i in range(len(gas)):
+            total_remain_gas += gas[i] - cost[i]
+            cur_gas += gas[i] - cost[i]
+            if cur_gas < 0:
+                index = (i + 1) % len(gas)
+                cur_gas = 0
+        if total_remain_gas < 0:
+            return -1
+        else:
+            return index
+
 class Solution:
     def canCompleteCircuit(self, gas, cost) :
         # 环的长度

@@ -20,69 +20,21 @@ class Solution:
 
 class Solution(object):
     def longestCommonPrefix(self, strs):
-        ans = ''
-        for i in zip(*strs):
-            if len(set(i)) == 1:
-                ans += i[0]
-            else:
-                break
-        return ans
-
-
-class Solution:
-    def longestCommonPrefix(self, strs):
         """
         :type strs: List[str]
         :rtype: str
         """
-        if len(strs) == 0:
-            return ''
-        minLen = len(strs[0])
-        for str in strs:
-            if len(str) < minLen:
-                minLen = len(str)
 
+        strs.sort(key=lambda x:len(x))
+        n = len(strs[0])
         res = ''
-        for i in range(minLen):
-            c = strs[0][i]
-            for str in strs:
-                if str[i] != c:
+        i = 0
+        while i < n:
+            cur_c = strs[0][i]
+            for j in range(1,len(strs)):
+                if strs[j][i] != cur_c:
                     return res
-            res += c
-
+            res += cur_c
+            i+=1
         return res
-class Solution:
-    def longestCommonPrefix(self, strs):
-        """
-        :type strs: List[str]
-        :rtype: str
-        """
-        if len(strs) == 0:
-            return ''
-        pre = strs[0]
-        for st in strs:
-            while 1:
-                if st.startswith(pre):
-                    break
-                else:
-                    pre = pre[:-1]
-        return pre
-class Solution(object):
-    def longestCommonPrefix(self, strs):
-        """
-        :type strs: List[str]
-        :rtype: str
-        """
-        if not strs:
-            return ''
-        res = ''
-        for i in xrange(len(strs[0])):
-            for j in xrange(1, len(strs)):
-                if i >= len(strs[j]) or strs[j][i] != strs[0][i]:
-                    return res
-            res += strs[0][i]
-        return res
-
-a = Solution()
-print(a.longestCommonPrefix(['']))
 # 14.最长公共前缀  .py

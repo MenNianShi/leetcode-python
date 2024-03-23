@@ -16,43 +16,13 @@ class Solution(object):
         :type val: int
         :rtype: int
         """
-
-        while (val in nums):
-            nums.remove(val)
-
-def removeElement(self, nums, val):
-    index = 0
-    for num in nums:
-        if num != val:
-            nums[index] = num
-            index += 1
-
-    return index
-
-print(removeElement([3,3,3],3))
-
-
-class Solution(object):
-    def removeElement(self, nums, val):
-        """
-        :type nums: List[int]
-        :type val: int
-        :rtype: int
-        """
-        if nums == []:
-            return 0
-        else:
-            front = 0
-            back = len(nums) - 1
-            while (front <= back):
-                if nums[front] == val:
-                    temp = nums[front]
-                    nums[front] = nums[back]
-                    nums[back] = temp
-                    back -= 1
-                else:
-                    front += 1
-        nums = nums[0:front]
-        return front
-
-# 27.移除元素  .py
+        x = len(nums)
+        cnt = 0
+        i = 0
+        while i < len(nums):
+            if nums[i] == val:
+                nums.pop(i)
+                cnt += 1
+            else:
+                i += 1
+        return x - cnt
