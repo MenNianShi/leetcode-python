@@ -22,7 +22,7 @@ class Solution:
         for _ in range(left - 1):
             pre = pre.next
 
-        cur = pre.next
+        cur = pre.next # cur 和 pre 保持不变， 一步步交换 nxt 和 cur
         for _ in range(right - left):
             nxt = cur.next
             cur.next = nxt.next
@@ -31,28 +31,47 @@ class Solution:
         return dummy_node.next
 
 class Solution(object):
-    successor = None
-    def reverseBetween(self, head, m, n):
+    def reverseBetween(self, head, left, right):
         """
         :type head: ListNode
-        :type m: int
-        :type n: int
+        :type left: int
+        :type right: int
         :rtype: ListNode
         """
-        if m==1:
-            return self.reverseN(head,n)
-        head.next  = self.reverseBetween(head.next,m-1,n-1)
-        return head
-    #反转前N个
-    def reverseN(self, head, n):
-        if (n==1):
-            # 记录第 n + 1 个节点
-            self.successor = head.next
-            return head
-        # 以head.next为起点，需要反转前n - 1 个节点
-        last = self.reverseN(head.next,n-1)
-        head.next.next = head
-        head.next = self.successor
-        return last
+
+        def reverse(head):
+            if head == None:
+                return None
+            if head.next == None:
+                return head
+            pre = head
+            p = head.next
+            pre.next = None
+            while p != None:
+                nxt = p.next
+                p.next = pre
+                pre = p
+                p = nxt
+            return pre
+
+        dummy = ListNode(0)
+        dummy.next = head
+        pre = dummy
+        for _ in range(left - 1):
+            pre = pre.next
+        start = pre.next  # 记录起始点
+        end = start
+        for _ in range(right - left):
+            end = end.next  # 找到结束节点
+        right_node = end.next  # 记录结束点的 后一个节点，用于拼接
+        left_node = pre  # 记录起始点的前一个节点，用于拼接
+        # 切断链接
+        left_node.next = None
+        end.next = None
+        x = reverse(start)  # 反转链表
+
+        left_node.next = x
+        start.next = right_node
+        return dummy.next
 
 # 92. 反转List II.py

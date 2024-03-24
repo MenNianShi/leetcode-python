@@ -31,4 +31,29 @@ class Solution(object):
         return len(mapval) == len(set(mapval))
 a = Solution()
 print(a.isIsomorphic('aa','ab'))
+
+class Solution(object):
+    def isIsomorphic(self, s, t):
+        """
+        :type s: str
+        :type t: str
+        :rtype: bool
+        """
+        return self.helper(s,t) and self.helper(t,s)
+    def helper(self,s,t):
+        a = {}
+        n = len(s)
+        m = len(t)
+        if n!=m:
+            return False
+        i = 0
+        while i < n:
+            if s[i] not in a:
+                a[s[i]] = t[i]
+            else:
+                if a[s[i]] != t[i]:
+                    return False
+            i+=1
+        return True
+
 # 205.同构字符串 .py

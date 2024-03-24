@@ -27,5 +27,21 @@ class Solution(object):
                 num_dict[num-l] = 1+r + l
                 res = max(res,num_dict[num])
         return res
-
+class Solution(object):
+    def longestConsecutive(self, nums):
+        """
+        :type nums: List[int]
+        :rtype: int
+        """
+        res = 0
+        num_set= set(nums)
+        for num in num_set:
+            if num-1  not in num_set:
+                cur_num = num
+                cur_long = 1
+                while cur_num + 1 in num_set:
+                    cur_num+=1
+                    cur_long +=1
+                res= max(res,cur_long)
+        return res
 # 128. 最长连续序列.py
