@@ -13,15 +13,15 @@ class Solution(object):
         """
 
         return self.dfs(root, None, None)
-    def dfs(self, root, minTree, maxTree):
+    def dfs(self, root, minNode, maxNode):
         # 左右子树的val 在 上下限 之间，递归更新上下限
         if root == None:
             return True
-        if minTree!= None and  root.val <= minTree.val:
+        if minNode!= None and  root.val <= minNode.val:
             return False
-        if maxTree!=None and root.val  >= maxTree.val:
+        if maxNode!=None and root.val  >= maxNode.val:
             return False
-        return self.dfs(root.left, minTree, root) and self.dfs(root.right, root,maxTree)
+        return self.dfs(root.left, minNode, root) and self.dfs(root.right, root,maxNode)
 
 
 # 98. 验证二叉搜索树.py

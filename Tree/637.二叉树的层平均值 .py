@@ -13,30 +13,20 @@ class Solution(object):
         :type root: TreeNode
         :rtype: List[float]
         """
-        result = []
-        q = queue.Queue()
-        q.put(root)
-        while(q.empty()==False):
-            n = q.qsize()
-            mysum = 0
-            for i in range(0,n):
-                x= q.get()
-                mysum +=x.val
-                if x.left!=None: q.put(x.left)
-                if x.right!=None: q.put(x.right)
-            result.append(mysum/n)
-        return result
-
-b = TreeNode(3)
-c = TreeNode(9)
-d = TreeNode(20)
-e = TreeNode(15)
-f = TreeNode(7)
-b.left = c
-b.right = d
-d.left = e
-d.right =f
-a = Solution()
-print(a.averageOfLevels(b))
-
+        if root == None:
+            return []
+        res = []
+        level = [root]
+        while len(level)>0:
+            cur_level = []
+            next_level = []
+            for node in level:
+                cur_level.append(node.val)
+                if node.left:
+                    next_level.append(node.left)
+                if node.right:
+                    next_level.append(node.right)
+            res.append((sum(cur_level)*1.0)/len(cur_level))
+            level = next_level
+        return res
 # 637.二叉树的层平均值 .py
