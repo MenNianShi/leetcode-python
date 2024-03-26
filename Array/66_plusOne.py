@@ -1,21 +1,17 @@
 # 给出一个非负的数，用数组来表示这个数，比如说9999就是[9,9,9,9]当对这个数加一的时候，将这个数用数组的形式返回。
-def plusOne(digits):
-    """
-    :type digits: List[int]
-    :rtype: List[int]
-    """
-    l = []
-    s = ''
-    for i in digits:
-        s = s + str(i)
-    digit = int(s)
-    digit +=1
-    for i in str(digit):
-
-        l.append(int(i))
-    return l
-l=[9,9,9,9]
-print(plusOne(l))
+class Solution(object):
+    def plusOne(self, digits):
+        """
+        :type digits: List[int]
+        :rtype: List[int]
+        """
+        n = len(digits)
+        for i in range(n - 1, -1, -1):
+            digits[i] += 1
+            digits[i] = digits[i] % 10
+            if digits[i] != 0: return digits
+        digits = [1] + digits
+        return digits
 
 
 class Solution(object):

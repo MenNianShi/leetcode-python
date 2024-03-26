@@ -61,4 +61,15 @@ class Solution(object):
                 left = mid+1
         return left
 
+class Solution(object):
+    def findPeakElement(self, nums):
+        """
+        :type nums: List[int]
+        :rtype: int
+        """
+        res = 0
+        for i in range(len(nums)):
+            if nums[i] > res :
+                res = i
+        return res
 # 162. 寻找峰值.py
