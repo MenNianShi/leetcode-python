@@ -41,77 +41,44 @@ import collections
 #
 # 在整个深度优先搜索的过程结束后，如果我们没有找到图中的环，那么栈中存储这所有的 nn 个节点，从栈顶到栈底的顺序即为一种拓扑排序。
 #
-
+import  collections
+# 210. 课程表 II.py
 class Solution(object):
-    valid = True
-    visited = []
 
-    def canFinish(self, numCourses, prerequisites):
+    def findOrder(self, numCourses, prerequisites):
         """
         :type numCourses: int
         :type prerequisites: List[List[int]]
-        :rtype: bool
+        :rtype: List[int]
         """
-        self.edges = collections.defaultdict(list)
+        self.res = []
+        # 判断有向图中是否有环
+        self.valid = True
+        # 标记每个节点的状态：0=未搜索，1=搜索中，2=已完成
         self.visited = [0] * numCourses
-
+        # 存储有向图
+        self.edges = collections.defaultdict(list)
         for info in prerequisites:
             self.edges[info[1]].append(info[0])
+        # 每次挑选一个「未搜索」的节点，开始进行深度优先搜索
         for i in range(numCourses):
-            if self.valid and not self.visited[i]:
+            if self.valid and self.visited[i] == 0:
                 self.dfs(i)
+        # 如果没有环，那么就有拓扑排序
+        # 注意下标 0 为栈底，因此需要将数组反序输出
         return self.valid
 
     def dfs(self, u):
-        self.visited[u] = 1
+        self.visited[u] = 1 # 搜索中
         for v in self.edges[u]:
-            if self.visited[v] == 0:
+            if self.visited[v] == 0: # 如果「未搜索」那么搜索相邻节点
                 self.dfs(v)
-                if not self.valid:
+                if not self.valid: # 只要发现有环，立刻停止搜索
                     return
-            elif self.visited[v] == 1:
+            elif self.visited[v] == 1: # 出现环，立刻停止搜索
                 self.valid = False
                 return
-        self.visited[u] = 2
-
-a =Solution()
-a.canFinish(2,[[0,1]])
-import collections
-class Solution:
-    def canFinish(self, numCourses, prerequisites) :
-        """
-      :type numCourses: int
-      :type prerequisites: List[List[int]]
-      :rtype: bool
-      """
-        edges = collections.defaultdict(list)
-        visited = [0] * numCourses
-        result = list()
-        valid = True
-
-        for info in prerequisites:
-            edges[info[1]].append(info[0])
-
-        def dfs(u: int):
-            nonlocal valid
-            visited[u] = 1
-            for v in edges[u]:
-                if visited[v] == 0:
-                    dfs(v)
-                    if not valid:
-                        return
-                elif visited[v] == 1:
-                    valid = False
-                    return
-            visited[u] = 2
-            result.append(u)
-
-        for i in range(numCourses):
-            if valid and not visited[i]:
-                dfs(i)
-
-        return valid
-
-
+            # else : visited[v] == 2，说明v已搜索完，不做操作
+        self.visited[u] = 2 # 搜索完成
 
 # 207. 课程表.py

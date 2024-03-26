@@ -23,7 +23,7 @@ class Node(object):
     def __init__(self, val = 0, neighbors = []):
         self.val = val
         self.neighbors = neighbors
-
+# 很像 138. 随机List的复制
 class Solution(object):
 
     def __init__(self):
